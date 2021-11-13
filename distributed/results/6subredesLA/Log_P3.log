@@ -1,0 +1,1983 @@
+INFO: 		[P3] 11:28:50.619531 distributed.go:35: [P3] Reading partners: 
+Partners:
+		[P0]		IP: 127.0.0.1		Port: 16090
+		[P1]		IP: 127.0.0.1		Port: 16091
+		[P2]		IP: 127.0.0.1		Port: 16092
+		[P4]		IP: 127.0.0.1		Port: 16094
+		[P5]		IP: 127.0.0.1		Port: 16095
+INFO: 		[P3] 11:28:50.619871 simulation_engine.go:266: ####################### CLK = 0 #######################
+TRACE: 		[P3] 11:28:50.619882 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:50.619887 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:50.619891 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:50.619895 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:50.619901 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:50.619907 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:50.619912 transition.go:67: 	TIEMPO:  0
+TRACE: 		[P3] 11:28:50.619915 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:50.619919 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:50.619923 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:50.619928 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:50.619933 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:50.619937 transition.go:77: 
+TRACE: 		[P3] 11:28:50.619940 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:50.619949 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:50.619952 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:50.619956 transition.go:67: 	TIEMPO:  0
+TRACE: 		[P3] 11:28:50.619960 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:50.619964 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:50.619970 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:50.619975 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:50.619982 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:50.619988 transition.go:77: 
+TRACE: 		[P3] 11:28:50.619994 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:50.619999 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:50.620003 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:50.620007 transition.go:67: 	TIEMPO:  0
+TRACE: 		[P3] 11:28:50.620011 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:50.620014 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:50.620017 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:50.620021 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:50.620024 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:50.620028 transition.go:77: 
+TRACE: 		[P3] 11:28:50.620031 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:50.620037 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:50.620040 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:50.620044 transition.go:150: 	Stack TRANSICIONES VACIA
+TRACE: 		[P3] 11:28:50.620048 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:50.620052 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:50.620058 simulation_engine.go:279: Eventos locales: [  ]
+TRACE: 		[P3] 11:28:50.620065 simulation_engine.go:280: Partners FIFO --> 	P2: [  ], 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 
+TRACE: 		[P3] 11:28:50.620069 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:50.620077 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:50.620172 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:50.620374 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:50.620479 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:50.620555 Node.go:121: Sending event to: 127.0.0.1:16094
+WARNING: 	[P3] 11:28:50.620568 Node.go:124: Remote node connection error: dial tcp 127.0.0.1:16094: connect: connection refused. Retrying in 2000000000...
+TRACE: 		[P3] 11:28:50.652408 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.621422 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.621616 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.621679 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.621726 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.621746 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.622125 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.622481 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.622571 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.622605 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.622583 Node.go:106: Received event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 3,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.622802 simulation_engine.go:254: Adding received event to incFIFO: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 3,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.622866 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.622898 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.623011 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.623303 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.623365 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.623398 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.623398 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.623651 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.623710 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.623743 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.623828 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.624122 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 3,	NULL }
+TRACE: 		[P3] 11:28:52.624197 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 6,	NULL }
+INFO: 		[P3] 11:28:52.624193 simulation_engine.go:205: Lower event is remote: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 3,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.624268 simulation_engine.go:289: +++ NEXT CLOCK: 3 +++
+INFO: 		[P3] 11:28:52.624310 simulation_engine.go:117: Processing next event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 3,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.624340 simulation_engine.go:266: ####################### CLK = 3 #######################
+TRACE: 		[P3] 11:28:52.624365 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.624391 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.624425 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.624450 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.624477 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.624501 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.624526 transition.go:67: 	TIEMPO:  3
+TRACE: 		[P3] 11:28:52.624551 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.624575 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.624601 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.624624 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.624649 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.624670 transition.go:77: 
+TRACE: 		[P3] 11:28:52.624684 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.624699 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.624735 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.624750 transition.go:67: 	TIEMPO:  0
+TRACE: 		[P3] 11:28:52.624764 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.624777 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.624791 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.624804 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.624834 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.624848 transition.go:77: 
+TRACE: 		[P3] 11:28:52.624861 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.624875 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.624888 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.624901 transition.go:67: 	TIEMPO:  0
+TRACE: 		[P3] 11:28:52.624914 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.624927 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.624940 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.624953 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.624967 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.624979 transition.go:77: 
+TRACE: 		[P3] 11:28:52.624993 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.625006 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.625033 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.625048 transition.go:153: 			 0
+TRACE: 		[P3] 11:28:52.625063 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.625084 simulation_engine.go:91: Appending local event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.625112 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.625138 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.625173 simulation_engine.go:280: Partners FIFO --> 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 
+TRACE: 		[P3] 11:28:52.625188 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.625209 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 }, lowerFIFOtime: 3
+TRACE: 		[P3] 11:28:52.625229 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.625443 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.625751 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.626082 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.626451 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.626833 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.627013 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.627076 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.627135 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 }, lowerFIFOtime: 3
+TRACE: 		[P3] 11:28:52.627180 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.627209 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.627502 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.627951 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.628076 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.628115 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 }, lowerFIFOtime: 3
+TRACE: 		[P3] 11:28:52.628140 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.628177 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.628202 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.628225 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 }, lowerFIFOtime: 3
+TRACE: 		[P3] 11:28:52.628256 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.628272 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.628476 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.628812 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.628936 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 6,	NULL }
+TRACE: 		[P3] 11:28:52.628987 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 }, lowerFIFOtime: 6
+INFO: 		[P3] 11:28:52.629026 simulation_engine.go:200: Lower event is local: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.629064 simulation_engine.go:289: +++ NEXT CLOCK: 6 +++
+INFO: 		[P3] 11:28:52.629102 simulation_engine.go:117: Processing next event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 6,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.629124 simulation_engine.go:266: ####################### CLK = 6 #######################
+TRACE: 		[P3] 11:28:52.629139 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.629157 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.629181 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.629198 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.629214 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.629230 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.629245 transition.go:67: 	TIEMPO:  3
+TRACE: 		[P3] 11:28:52.629281 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.629294 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.629310 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.629324 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.629339 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.629353 transition.go:77: 
+TRACE: 		[P3] 11:28:52.629367 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.629381 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.629396 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.629410 transition.go:67: 	TIEMPO:  6
+TRACE: 		[P3] 11:28:52.629424 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.629437 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.629451 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.629464 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.629479 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.629493 transition.go:77: 
+TRACE: 		[P3] 11:28:52.629507 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.629521 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.629535 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.629549 transition.go:67: 	TIEMPO:  0
+TRACE: 		[P3] 11:28:52.629570 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.629583 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.629597 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.629624 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.629646 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.629669 transition.go:77: 
+TRACE: 		[P3] 11:28:52.629693 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.629717 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.629742 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.629769 transition.go:153: 			 1
+TRACE: 		[P3] 11:28:52.629796 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.629859 simulation_engine.go:91: Appending local event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.629893 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.629935 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.629985 simulation_engine.go:280: Partners FIFO --> 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 
+TRACE: 		[P3] 11:28:52.630011 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.630049 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 }, lowerFIFOtime: 6
+TRACE: 		[P3] 11:28:52.630087 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.630349 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.630776 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.631155 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.631534 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.631956 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.632154 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.632231 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.632283 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 }, lowerFIFOtime: 6
+TRACE: 		[P3] 11:28:52.632323 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.632353 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.632729 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.633152 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.633295 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.633366 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 }, lowerFIFOtime: 6
+TRACE: 		[P3] 11:28:52.633414 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.633449 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.633490 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.633534 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 }, lowerFIFOtime: 6
+TRACE: 		[P3] 11:28:52.633596 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.633648 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.633984 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.634250 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.634303 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 }, lowerFIFOtime: 6
+TRACE: 		[P3] 11:28:52.634341 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.634371 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.634430 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.634663 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 9,	NULL }
+TRACE: 		[P3] 11:28:52.634722 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 }, lowerFIFOtime: 9
+INFO: 		[P3] 11:28:52.634764 simulation_engine.go:200: Lower event is local: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.634828 simulation_engine.go:289: +++ NEXT CLOCK: 9 +++
+INFO: 		[P3] 11:28:52.634866 simulation_engine.go:117: Processing next event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 9,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.634894 simulation_engine.go:266: ####################### CLK = 9 #######################
+TRACE: 		[P3] 11:28:52.634919 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.634944 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.634961 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.634977 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.635001 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.635026 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.635042 transition.go:67: 	TIEMPO:  3
+TRACE: 		[P3] 11:28:52.635056 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.635095 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.635120 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.635136 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.635151 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.635165 transition.go:77: 
+TRACE: 		[P3] 11:28:52.635185 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.635208 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.635231 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.635255 transition.go:67: 	TIEMPO:  6
+TRACE: 		[P3] 11:28:52.635280 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.635302 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.635325 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.635347 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.635363 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.635383 transition.go:77: 
+TRACE: 		[P3] 11:28:52.635405 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.635428 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.635450 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.635473 transition.go:67: 	TIEMPO:  9
+TRACE: 		[P3] 11:28:52.635495 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.635529 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.635551 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.635574 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.635615 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.635645 transition.go:77: 
+TRACE: 		[P3] 11:28:52.635667 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.635690 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.635712 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.635734 transition.go:153: 			 2
+TRACE: 		[P3] 11:28:52.635752 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+INFO: 		[P3] 11:28:52.635788 simulation_engine.go:88: Sending event { INDTRANS: 1,	SENDER: P3,	TIEMPO: 12,	CSTE: -1 } to node [P0]
+TRACE: 		[P3] 11:28:52.636035 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.636250 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.636294 simulation_engine.go:279: Eventos locales: [  ]
+TRACE: 		[P3] 11:28:52.636346 simulation_engine.go:280: Partners FIFO --> 	P5: [  ], 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 
+TRACE: 		[P3] 11:28:52.636373 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.636416 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.636425 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.636648 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.637093 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.637550 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.637977 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.638170 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.638244 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.638313 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.638343 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.638835 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.639330 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.639452 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.639524 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.639553 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.639592 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.639688 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.639723 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.640039 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.640383 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.640494 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.640534 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.640565 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.640589 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 12,	NULL }
+TRACE: 		[P3] 11:28:52.640612 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.642565 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.642790 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.643025 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.643382 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.643740 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.644082 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.644270 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.644344 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.644388 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.644416 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.644674 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.645041 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.645157 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.645205 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.645233 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.645266 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.645299 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.645322 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.645647 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.645982 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.646113 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.646158 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.646196 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.646228 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 15,	NULL }
+TRACE: 		[P3] 11:28:52.646261 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.646491 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.646854 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.647213 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.647395 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.648002 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.648536 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.648729 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.648781 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.648821 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.648847 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.649142 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.649416 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.649507 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.649548 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.649554 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.649745 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.649795 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.649830 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.649946 Node.go:106: Received event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 18,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.650296 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.650407 simulation_engine.go:254: Adding received event to incFIFO: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 18,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.650473 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 18,	NULL }
+TRACE: 		[P3] 11:28:52.650500 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.650549 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 18,	NULL }
+INFO: 		[P3] 11:28:52.650591 simulation_engine.go:205: Lower event is remote: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 18,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.650625 simulation_engine.go:289: +++ NEXT CLOCK: 18 +++
+INFO: 		[P3] 11:28:52.650655 simulation_engine.go:117: Processing next event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 18,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.650680 simulation_engine.go:266: ####################### CLK = 18 #######################
+TRACE: 		[P3] 11:28:52.650702 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.650725 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.650746 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.650767 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.650789 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.650810 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.650831 transition.go:67: 	TIEMPO:  18
+TRACE: 		[P3] 11:28:52.650864 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.650889 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.650934 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.650956 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.650978 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.650999 transition.go:77: 
+TRACE: 		[P3] 11:28:52.651034 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.651058 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.651081 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.651103 transition.go:67: 	TIEMPO:  6
+TRACE: 		[P3] 11:28:52.651125 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.651147 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.651169 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.651188 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.651209 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.651230 transition.go:77: 
+TRACE: 		[P3] 11:28:52.651253 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.651276 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.651296 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.651317 transition.go:67: 	TIEMPO:  9
+TRACE: 		[P3] 11:28:52.651339 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.651359 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.651379 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.651400 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.651421 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.651462 transition.go:77: 
+TRACE: 		[P3] 11:28:52.651483 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.651505 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.651526 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.651552 transition.go:153: 			 0
+TRACE: 		[P3] 11:28:52.651573 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.651621 simulation_engine.go:91: Appending local event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.651655 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.651694 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.651736 simulation_engine.go:280: Partners FIFO --> 	P5: [  ], 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 
+TRACE: 		[P3] 11:28:52.651761 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.651796 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 }, lowerFIFOtime: 18
+TRACE: 		[P3] 11:28:52.651840 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.652306 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.652462 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.652696 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.652913 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.653158 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.653418 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.653555 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.653624 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.653660 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 }, lowerFIFOtime: 18
+TRACE: 		[P3] 11:28:52.653692 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.653723 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.653964 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.654189 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.654235 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 }, lowerFIFOtime: 18
+TRACE: 		[P3] 11:28:52.654270 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.654293 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.654512 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.654795 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.654914 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.654940 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 }, lowerFIFOtime: 18
+TRACE: 		[P3] 11:28:52.654960 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.654973 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.654989 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.655025 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 }, lowerFIFOtime: 18
+TRACE: 		[P3] 11:28:52.655064 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.655083 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.655278 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.655377 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 21,	NULL }
+TRACE: 		[P3] 11:28:52.655424 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 }, lowerFIFOtime: 21
+INFO: 		[P3] 11:28:52.655450 simulation_engine.go:200: Lower event is local: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.655473 simulation_engine.go:289: +++ NEXT CLOCK: 21 +++
+INFO: 		[P3] 11:28:52.655495 simulation_engine.go:117: Processing next event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 21,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.655515 simulation_engine.go:266: ####################### CLK = 21 #######################
+TRACE: 		[P3] 11:28:52.655531 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.655548 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.655562 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.655576 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.655590 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.655617 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.655636 transition.go:67: 	TIEMPO:  18
+TRACE: 		[P3] 11:28:52.655651 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.655665 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.655681 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.655696 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.655711 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.655747 transition.go:77: 
+TRACE: 		[P3] 11:28:52.655764 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.655781 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.655797 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.655813 transition.go:67: 	TIEMPO:  21
+TRACE: 		[P3] 11:28:52.655830 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.655844 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.655859 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.655873 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.655888 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.655902 transition.go:77: 
+TRACE: 		[P3] 11:28:52.655916 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.655930 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.655962 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.655982 transition.go:67: 	TIEMPO:  9
+TRACE: 		[P3] 11:28:52.655999 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.656013 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.656028 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.656041 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.656058 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.656083 transition.go:77: 
+TRACE: 		[P3] 11:28:52.656099 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.656114 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.656128 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.656144 transition.go:153: 			 1
+TRACE: 		[P3] 11:28:52.656160 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.656181 simulation_engine.go:91: Appending local event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.656199 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.656222 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.656251 simulation_engine.go:280: Partners FIFO --> 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 
+TRACE: 		[P3] 11:28:52.656268 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.656292 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 }, lowerFIFOtime: 21
+TRACE: 		[P3] 11:28:52.656316 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.656459 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.656697 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.656935 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.657294 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.657408 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.657661 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.657805 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.657844 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.657873 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 }, lowerFIFOtime: 21
+TRACE: 		[P3] 11:28:52.657905 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.657924 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.658086 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658160 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658182 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 }, lowerFIFOtime: 21
+TRACE: 		[P3] 11:28:52.658195 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658205 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.658417 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658657 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658738 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658767 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 }, lowerFIFOtime: 21
+TRACE: 		[P3] 11:28:52.658796 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658829 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.658853 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658880 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 }, lowerFIFOtime: 21
+TRACE: 		[P3] 11:28:52.658903 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.658920 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.659110 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.659201 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 24,	NULL }
+TRACE: 		[P3] 11:28:52.659232 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 }, lowerFIFOtime: 24
+INFO: 		[P3] 11:28:52.659256 simulation_engine.go:200: Lower event is local: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.659277 simulation_engine.go:289: +++ NEXT CLOCK: 24 +++
+INFO: 		[P3] 11:28:52.659299 simulation_engine.go:117: Processing next event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 24,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.659316 simulation_engine.go:266: ####################### CLK = 24 #######################
+TRACE: 		[P3] 11:28:52.659331 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.659346 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.659360 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.659375 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.659389 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.659404 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.659419 transition.go:67: 	TIEMPO:  18
+TRACE: 		[P3] 11:28:52.659435 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.659449 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.659466 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.659481 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.659498 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.659512 transition.go:77: 
+TRACE: 		[P3] 11:28:52.659542 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.659557 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.659573 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.659588 transition.go:67: 	TIEMPO:  21
+TRACE: 		[P3] 11:28:52.659623 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.659641 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.659657 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.659673 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.659689 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.659704 transition.go:77: 
+TRACE: 		[P3] 11:28:52.659718 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.659733 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.659748 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.659764 transition.go:67: 	TIEMPO:  24
+TRACE: 		[P3] 11:28:52.659780 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.659796 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.659812 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.659829 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.659847 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.659862 transition.go:77: 
+TRACE: 		[P3] 11:28:52.659902 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.659914 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.659926 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.659938 transition.go:153: 			 2
+TRACE: 		[P3] 11:28:52.659950 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+INFO: 		[P3] 11:28:52.659980 simulation_engine.go:88: Sending event { INDTRANS: 1,	SENDER: P3,	TIEMPO: 27,	CSTE: -1 } to node [P0]
+TRACE: 		[P3] 11:28:52.660089 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.660199 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.660218 simulation_engine.go:279: Eventos locales: [  ]
+TRACE: 		[P3] 11:28:52.660241 simulation_engine.go:280: Partners FIFO --> 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 	P2: [  ], 
+TRACE: 		[P3] 11:28:52.660255 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.660273 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.660371 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.660722 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.660825 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.661014 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.661179 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.661268 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.661303 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661328 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661354 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.661512 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661592 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661612 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661620 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.661717 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661794 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661815 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661828 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.661883 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661942 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661955 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.661963 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.662605 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.662819 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.662867 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.662892 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.662907 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.662924 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 27,	NULL }
+TRACE: 		[P3] 11:28:52.662943 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.663149 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.663233 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.663391 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.663568 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.663751 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.663947 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.664046 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.664068 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.664088 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.664104 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.664253 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.664417 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.664465 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.664480 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.664489 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.664499 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.664510 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.664517 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.666167 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.666234 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 30,	NULL }
+TRACE: 		[P3] 11:28:52.666251 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.666341 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.666498 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.666705 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.666769 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.666901 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.667018 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.667095 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.667126 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667146 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667158 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.667274 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667345 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667371 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667384 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.667441 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667515 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667534 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667546 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.667597 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667696 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667718 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 33,	NULL }
+TRACE: 		[P3] 11:28:52.667730 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.668316 Node.go:106: Received event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 33,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.668383 simulation_engine.go:254: Adding received event to incFIFO: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 33,	CSTE: -1 }
+INFO: 		[P3] 11:28:52.668410 simulation_engine.go:205: Lower event is remote: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 33,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.668420 simulation_engine.go:289: +++ NEXT CLOCK: 33 +++
+INFO: 		[P3] 11:28:52.668435 simulation_engine.go:117: Processing next event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 33,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.668444 simulation_engine.go:266: ####################### CLK = 33 #######################
+TRACE: 		[P3] 11:28:52.668450 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.668457 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.668463 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.668469 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.668483 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.668490 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.668496 transition.go:67: 	TIEMPO:  33
+TRACE: 		[P3] 11:28:52.668501 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.668509 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.668518 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.668523 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.668530 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.668535 transition.go:77: 
+TRACE: 		[P3] 11:28:52.668541 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.668546 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.668552 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.668557 transition.go:67: 	TIEMPO:  21
+TRACE: 		[P3] 11:28:52.668566 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.668573 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.668578 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.668585 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.668594 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.668600 transition.go:77: 
+TRACE: 		[P3] 11:28:52.668606 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.668617 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.668623 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.668628 transition.go:67: 	TIEMPO:  24
+TRACE: 		[P3] 11:28:52.668634 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.668642 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.668651 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.668658 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.668664 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.668669 transition.go:77: 
+TRACE: 		[P3] 11:28:52.668675 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.668681 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.668686 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.668692 transition.go:153: 			 0
+TRACE: 		[P3] 11:28:52.668698 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.668706 simulation_engine.go:91: Appending local event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.668713 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.668728 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.668741 simulation_engine.go:280: Partners FIFO --> 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 
+TRACE: 		[P3] 11:28:52.668749 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.668765 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 }, lowerFIFOtime: 33
+TRACE: 		[P3] 11:28:52.668774 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.668886 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.668952 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669035 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.669154 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.669275 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.669421 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.669495 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.669519 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669535 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 }, lowerFIFOtime: 33
+TRACE: 		[P3] 11:28:52.669549 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669557 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.669655 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669783 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669808 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669809 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 }, lowerFIFOtime: 33
+TRACE: 		[P3] 11:28:52.669847 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669860 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.669893 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669906 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 }, lowerFIFOtime: 33
+TRACE: 		[P3] 11:28:52.669919 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.669929 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.670042 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.670096 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.670120 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 }, lowerFIFOtime: 33
+TRACE: 		[P3] 11:28:52.670132 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.670142 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.670185 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.670245 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 36,	NULL }
+TRACE: 		[P3] 11:28:52.670264 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 }, lowerFIFOtime: 36
+INFO: 		[P3] 11:28:52.670278 simulation_engine.go:200: Lower event is local: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.670290 simulation_engine.go:289: +++ NEXT CLOCK: 36 +++
+INFO: 		[P3] 11:28:52.670302 simulation_engine.go:117: Processing next event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 36,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.670318 simulation_engine.go:266: ####################### CLK = 36 #######################
+TRACE: 		[P3] 11:28:52.670327 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.670335 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.670343 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.670351 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.670360 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.670368 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.670376 transition.go:67: 	TIEMPO:  33
+TRACE: 		[P3] 11:28:52.670396 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.670405 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.670414 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.670422 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.670431 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.670440 transition.go:77: 
+TRACE: 		[P3] 11:28:52.670448 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.670461 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.670468 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.670477 transition.go:67: 	TIEMPO:  36
+TRACE: 		[P3] 11:28:52.670485 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.670493 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.670501 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.670509 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.670518 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.670526 transition.go:77: 
+TRACE: 		[P3] 11:28:52.670534 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.670542 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.670550 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.670559 transition.go:67: 	TIEMPO:  24
+TRACE: 		[P3] 11:28:52.670567 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.670574 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.670582 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.670589 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.670588 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.670596 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.670612 transition.go:77: 
+TRACE: 		[P3] 11:28:52.670628 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.670636 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.670643 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.670653 transition.go:153: 			 1
+TRACE: 		[P3] 11:28:52.670662 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.670676 simulation_engine.go:91: Appending local event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.670686 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.670698 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.670713 simulation_engine.go:280: Partners FIFO --> 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 	P2: [  ], 
+TRACE: 		[P3] 11:28:52.670722 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.670734 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 }, lowerFIFOtime: 36
+TRACE: 		[P3] 11:28:52.670750 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.670824 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.670955 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.671075 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.671187 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.671275 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.671320 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.671337 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671347 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 }, lowerFIFOtime: 36
+TRACE: 		[P3] 11:28:52.671357 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671362 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.671439 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671495 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671513 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 }, lowerFIFOtime: 36
+TRACE: 		[P3] 11:28:52.671522 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671530 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.671665 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671731 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671758 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 }, lowerFIFOtime: 36
+TRACE: 		[P3] 11:28:52.671774 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671783 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.671791 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671841 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671862 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 }, lowerFIFOtime: 36
+TRACE: 		[P3] 11:28:52.671889 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671899 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.671938 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.671993 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 39,	NULL }
+TRACE: 		[P3] 11:28:52.672009 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 }, lowerFIFOtime: 39
+INFO: 		[P3] 11:28:52.672018 simulation_engine.go:200: Lower event is local: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.672024 simulation_engine.go:289: +++ NEXT CLOCK: 39 +++
+INFO: 		[P3] 11:28:52.672031 simulation_engine.go:117: Processing next event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 39,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.672036 simulation_engine.go:266: ####################### CLK = 39 #######################
+TRACE: 		[P3] 11:28:52.672042 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.672047 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.672052 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.672056 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.672061 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.672067 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.672075 transition.go:67: 	TIEMPO:  33
+TRACE: 		[P3] 11:28:52.672081 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.672086 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.672091 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.672095 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.672105 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.672110 transition.go:77: 
+TRACE: 		[P3] 11:28:52.672115 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.672120 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.672125 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.672129 transition.go:67: 	TIEMPO:  36
+TRACE: 		[P3] 11:28:52.672133 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.672138 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.672143 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.672150 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.672156 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.672167 transition.go:77: 
+TRACE: 		[P3] 11:28:52.672172 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.672177 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.672182 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.672187 transition.go:67: 	TIEMPO:  39
+TRACE: 		[P3] 11:28:52.672192 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.672198 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.672202 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.672207 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.672215 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.672220 transition.go:77: 
+TRACE: 		[P3] 11:28:52.672227 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.672234 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.672240 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.672246 transition.go:153: 			 2
+TRACE: 		[P3] 11:28:52.672253 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+INFO: 		[P3] 11:28:52.672261 simulation_engine.go:88: Sending event { INDTRANS: 1,	SENDER: P3,	TIEMPO: 42,	CSTE: -1 } to node [P0]
+TRACE: 		[P3] 11:28:52.672340 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.672396 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.672409 simulation_engine.go:279: Eventos locales: [  ]
+TRACE: 		[P3] 11:28:52.672426 simulation_engine.go:280: Partners FIFO --> 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 
+TRACE: 		[P3] 11:28:52.672431 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.672440 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.672501 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.672603 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.672704 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.672718 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.672951 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.673007 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.673033 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673047 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673056 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.673156 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673217 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673235 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673245 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.673293 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673351 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673375 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673387 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.673670 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673761 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673769 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673778 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673799 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.673808 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 42,	NULL }
+TRACE: 		[P3] 11:28:52.673821 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.673896 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.674001 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.674120 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.674232 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.674363 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.674425 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.674459 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.674520 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.674544 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.674556 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.674592 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.674639 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.674663 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.674673 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.675089 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.675134 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.675147 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.675155 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.675426 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.675464 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.675474 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.675479 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.676670 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.676716 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 45,	NULL }
+TRACE: 		[P3] 11:28:52.676738 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.676808 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.676934 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.677048 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.677058 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677169 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.677273 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.677325 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.677355 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677368 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677377 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.677488 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677540 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677558 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677575 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.677607 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677654 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677668 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677681 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.677727 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677774 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677791 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 48,	NULL }
+TRACE: 		[P3] 11:28:52.677800 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.678408 Node.go:106: Received event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 48,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.678447 simulation_engine.go:254: Adding received event to incFIFO: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 48,	CSTE: -1 }
+INFO: 		[P3] 11:28:52.678458 simulation_engine.go:205: Lower event is remote: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 48,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.678465 simulation_engine.go:289: +++ NEXT CLOCK: 48 +++
+INFO: 		[P3] 11:28:52.678471 simulation_engine.go:117: Processing next event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 48,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.678475 simulation_engine.go:266: ####################### CLK = 48 #######################
+TRACE: 		[P3] 11:28:52.678479 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.678484 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.678488 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.678492 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.678496 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.678500 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.678505 transition.go:67: 	TIEMPO:  48
+TRACE: 		[P3] 11:28:52.678509 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.678513 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.678517 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.678521 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.678527 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.678531 transition.go:77: 
+TRACE: 		[P3] 11:28:52.678540 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.678544 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.678548 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.678552 transition.go:67: 	TIEMPO:  36
+TRACE: 		[P3] 11:28:52.678557 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.678563 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.678569 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.678575 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.678583 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.678589 transition.go:77: 
+TRACE: 		[P3] 11:28:52.678595 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.678602 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.678608 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.678615 transition.go:67: 	TIEMPO:  39
+TRACE: 		[P3] 11:28:52.678621 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.678627 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.678633 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.678639 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.678646 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.678652 transition.go:77: 
+TRACE: 		[P3] 11:28:52.678662 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.678669 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.678675 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.678693 transition.go:153: 			 0
+TRACE: 		[P3] 11:28:52.678702 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.678715 simulation_engine.go:91: Appending local event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.678724 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.678741 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.678755 simulation_engine.go:280: Partners FIFO --> 	P2: [  ], 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 
+TRACE: 		[P3] 11:28:52.678763 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.678776 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 }, lowerFIFOtime: 48
+TRACE: 		[P3] 11:28:52.678787 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.678860 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.678975 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.679072 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.679183 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.679281 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.679334 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.679448 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679568 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679579 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679592 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 }, lowerFIFOtime: 48
+TRACE: 		[P3] 11:28:52.679624 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679633 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.679648 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679660 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 }, lowerFIFOtime: 48
+TRACE: 		[P3] 11:28:52.679671 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679679 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.679790 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679913 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679950 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679968 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 }, lowerFIFOtime: 48
+TRACE: 		[P3] 11:28:52.679979 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.679987 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.679997 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.680008 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 }, lowerFIFOtime: 48
+TRACE: 		[P3] 11:28:52.680018 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.680026 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.680113 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.680155 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 51,	NULL }
+TRACE: 		[P3] 11:28:52.680180 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 }, lowerFIFOtime: 51
+INFO: 		[P3] 11:28:52.680191 simulation_engine.go:200: Lower event is local: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.680202 simulation_engine.go:289: +++ NEXT CLOCK: 51 +++
+INFO: 		[P3] 11:28:52.680233 simulation_engine.go:117: Processing next event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 51,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.680241 simulation_engine.go:266: ####################### CLK = 51 #######################
+TRACE: 		[P3] 11:28:52.680248 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.680254 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.680260 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.680265 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.680271 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.680277 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.680283 transition.go:67: 	TIEMPO:  48
+TRACE: 		[P3] 11:28:52.680290 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.680295 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.680303 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.680312 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.680319 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.680325 transition.go:77: 
+TRACE: 		[P3] 11:28:52.680331 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.680337 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.680347 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.680354 transition.go:67: 	TIEMPO:  51
+TRACE: 		[P3] 11:28:52.680360 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.680366 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.680372 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.680379 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.680385 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.680391 transition.go:77: 
+TRACE: 		[P3] 11:28:52.680397 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.680403 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.680409 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.680414 transition.go:67: 	TIEMPO:  39
+TRACE: 		[P3] 11:28:52.680421 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.680426 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.680433 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.680439 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.680445 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.680451 transition.go:77: 
+TRACE: 		[P3] 11:28:52.680457 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.680468 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.680474 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.680481 transition.go:153: 			 1
+TRACE: 		[P3] 11:28:52.680488 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.680505 simulation_engine.go:91: Appending local event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.680513 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.680529 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.680541 simulation_engine.go:280: Partners FIFO --> 	P5: [  ], 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 
+TRACE: 		[P3] 11:28:52.680548 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.680558 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 }, lowerFIFOtime: 51
+TRACE: 		[P3] 11:28:52.680575 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.680637 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.680686 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.680902 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.680982 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.681065 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.681144 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.681178 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.681193 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681205 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 }, lowerFIFOtime: 51
+TRACE: 		[P3] 11:28:52.681213 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681218 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.681286 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681328 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681345 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 }, lowerFIFOtime: 51
+TRACE: 		[P3] 11:28:52.681355 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681363 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.681384 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681422 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681437 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 }, lowerFIFOtime: 51
+TRACE: 		[P3] 11:28:52.681447 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681454 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.681477 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681513 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681528 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 }, lowerFIFOtime: 51
+TRACE: 		[P3] 11:28:52.681539 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681547 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.681579 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681617 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 54,	NULL }
+TRACE: 		[P3] 11:28:52.681645 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 }, lowerFIFOtime: 54
+INFO: 		[P3] 11:28:52.681656 simulation_engine.go:200: Lower event is local: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.681665 simulation_engine.go:289: +++ NEXT CLOCK: 54 +++
+INFO: 		[P3] 11:28:52.681679 simulation_engine.go:117: Processing next event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 54,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.681702 simulation_engine.go:266: ####################### CLK = 54 #######################
+TRACE: 		[P3] 11:28:52.681707 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.681712 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.681715 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.681721 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.681725 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.681734 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.681739 transition.go:67: 	TIEMPO:  48
+TRACE: 		[P3] 11:28:52.681742 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.681746 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.681758 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.681763 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.681767 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.681770 transition.go:77: 
+TRACE: 		[P3] 11:28:52.681774 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.681778 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.681782 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.681785 transition.go:67: 	TIEMPO:  51
+TRACE: 		[P3] 11:28:52.681789 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.681793 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.681797 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.681801 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.681804 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.681808 transition.go:77: 
+TRACE: 		[P3] 11:28:52.681813 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.681819 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.681823 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.681829 transition.go:67: 	TIEMPO:  54
+TRACE: 		[P3] 11:28:52.681833 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.681837 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.681843 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.681847 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.681850 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.681854 transition.go:77: 
+TRACE: 		[P3] 11:28:52.681858 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.681861 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.681865 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.681869 transition.go:153: 			 2
+TRACE: 		[P3] 11:28:52.681873 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+INFO: 		[P3] 11:28:52.681879 simulation_engine.go:88: Sending event { INDTRANS: 1,	SENDER: P3,	TIEMPO: 57,	CSTE: -1 } to node [P0]
+TRACE: 		[P3] 11:28:52.681934 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.681988 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.681997 simulation_engine.go:279: Eventos locales: [  ]
+TRACE: 		[P3] 11:28:52.682010 simulation_engine.go:280: Partners FIFO --> 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 
+TRACE: 		[P3] 11:28:52.682018 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.682029 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.682086 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.682194 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.682279 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.682433 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.682480 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.682509 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.682555 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.682577 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.682584 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.683768 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.683821 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.683844 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.683852 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.683885 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.683927 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.683936 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.683942 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.683996 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.684101 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.684109 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.684122 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.684126 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.684147 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 57,	NULL }
+TRACE: 		[P3] 11:28:52.684158 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684217 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684260 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.684333 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.684401 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.684470 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.684540 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.684593 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.684612 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684624 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684633 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.684725 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684777 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684792 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684797 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.684822 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684867 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684880 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684884 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.684913 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684947 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684970 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.684975 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.685162 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.685216 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 60,	NULL }
+TRACE: 		[P3] 11:28:52.685226 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.685279 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.685825 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.685891 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.685925 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.686029 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.686124 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.686166 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.686180 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686192 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686197 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.686286 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686351 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686364 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686386 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.686418 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686455 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686464 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686469 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.686494 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686525 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686534 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 63,	NULL }
+TRACE: 		[P3] 11:28:52.686539 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.686566 Node.go:106: Received event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 63,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.686602 simulation_engine.go:254: Adding received event to incFIFO: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 63,	CSTE: -1 }
+INFO: 		[P3] 11:28:52.686613 simulation_engine.go:205: Lower event is remote: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 63,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.686618 simulation_engine.go:289: +++ NEXT CLOCK: 63 +++
+INFO: 		[P3] 11:28:52.686624 simulation_engine.go:117: Processing next event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 63,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.686629 simulation_engine.go:266: ####################### CLK = 63 #######################
+TRACE: 		[P3] 11:28:52.686636 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.686641 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.686646 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.686650 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.686655 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.686658 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.686662 transition.go:67: 	TIEMPO:  63
+TRACE: 		[P3] 11:28:52.686666 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.686670 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.686674 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.686678 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.686682 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.686685 transition.go:77: 
+TRACE: 		[P3] 11:28:52.686689 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.686693 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.686699 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.686703 transition.go:67: 	TIEMPO:  51
+TRACE: 		[P3] 11:28:52.686709 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.686714 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.686723 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.686727 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.686731 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.686735 transition.go:77: 
+TRACE: 		[P3] 11:28:52.686739 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.686742 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.686746 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.686750 transition.go:67: 	TIEMPO:  54
+TRACE: 		[P3] 11:28:52.686753 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.686757 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.686760 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.686764 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.686768 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.686772 transition.go:77: 
+TRACE: 		[P3] 11:28:52.686775 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.686779 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.686788 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.686792 transition.go:153: 			 0
+TRACE: 		[P3] 11:28:52.686796 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.686802 simulation_engine.go:91: Appending local event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.686807 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.686814 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.686823 simulation_engine.go:280: Partners FIFO --> 	P2: [  ], 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 
+TRACE: 		[P3] 11:28:52.686827 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.686833 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 }, lowerFIFOtime: 63
+TRACE: 		[P3] 11:28:52.686838 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.687445 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.687629 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.687683 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.687783 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.687884 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.687996 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.688048 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.688066 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688084 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 }, lowerFIFOtime: 63
+TRACE: 		[P3] 11:28:52.688100 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688109 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.688170 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688249 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688276 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688285 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 }, lowerFIFOtime: 63
+TRACE: 		[P3] 11:28:52.688292 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688299 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.688306 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688324 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 }, lowerFIFOtime: 63
+TRACE: 		[P3] 11:28:52.688335 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688344 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.688424 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688483 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688499 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 }, lowerFIFOtime: 63
+TRACE: 		[P3] 11:28:52.688514 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688523 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.688526 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688673 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 66,	NULL }
+TRACE: 		[P3] 11:28:52.688707 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 }, lowerFIFOtime: 66
+INFO: 		[P3] 11:28:52.688718 simulation_engine.go:200: Lower event is local: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.688727 simulation_engine.go:289: +++ NEXT CLOCK: 66 +++
+TRACE: 		[P3] 11:28:52.688735 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 69,	NULL }
+INFO: 		[P3] 11:28:52.688737 simulation_engine.go:117: Processing next event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 66,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.688761 simulation_engine.go:266: ####################### CLK = 66 #######################
+TRACE: 		[P3] 11:28:52.688773 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.688780 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.688787 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.688793 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.688805 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.688811 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.688818 transition.go:67: 	TIEMPO:  63
+TRACE: 		[P3] 11:28:52.688824 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.688830 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.688836 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.688842 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.688850 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.688856 transition.go:77: 
+TRACE: 		[P3] 11:28:52.688862 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.688868 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.688874 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.688880 transition.go:67: 	TIEMPO:  66
+TRACE: 		[P3] 11:28:52.688886 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.688892 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.688898 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.688905 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.688911 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.688917 transition.go:77: 
+TRACE: 		[P3] 11:28:52.688931 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.688938 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.688944 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.688951 transition.go:67: 	TIEMPO:  54
+TRACE: 		[P3] 11:28:52.688957 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.688963 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.688970 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.688976 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.688982 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.689001 transition.go:77: 
+TRACE: 		[P3] 11:28:52.689028 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.689035 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.689042 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.689049 transition.go:153: 			 1
+TRACE: 		[P3] 11:28:52.689055 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.689065 simulation_engine.go:91: Appending local event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.689072 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.689082 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.689095 simulation_engine.go:280: Partners FIFO --> 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 	P2: [  ], 
+TRACE: 		[P3] 11:28:52.689102 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.689116 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 }, lowerFIFOtime: 66
+TRACE: 		[P3] 11:28:52.689126 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689182 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.689265 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.689349 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.689450 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.689543 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.689592 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.689609 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689624 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 }, lowerFIFOtime: 66
+TRACE: 		[P3] 11:28:52.689630 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689635 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.689719 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689824 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689863 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689876 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 }, lowerFIFOtime: 66
+TRACE: 		[P3] 11:28:52.689887 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689900 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.689910 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689924 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 }, lowerFIFOtime: 66
+TRACE: 		[P3] 11:28:52.689934 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.689942 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.690033 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.690138 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.690173 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.690188 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 }, lowerFIFOtime: 66
+TRACE: 		[P3] 11:28:52.690199 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.690214 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.690227 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 69,	NULL }
+TRACE: 		[P3] 11:28:52.690238 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 }, lowerFIFOtime: 69
+INFO: 		[P3] 11:28:52.690248 simulation_engine.go:200: Lower event is local: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.690261 simulation_engine.go:289: +++ NEXT CLOCK: 69 +++
+INFO: 		[P3] 11:28:52.690271 simulation_engine.go:117: Processing next event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 69,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.690279 simulation_engine.go:266: ####################### CLK = 69 #######################
+TRACE: 		[P3] 11:28:52.690286 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.690296 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.690302 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.690308 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.690315 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.690321 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.690327 transition.go:67: 	TIEMPO:  63
+TRACE: 		[P3] 11:28:52.690333 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.690332 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.690338 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.690352 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.690358 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.690365 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.690371 transition.go:77: 
+TRACE: 		[P3] 11:28:52.690377 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.690383 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.690389 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.690394 transition.go:67: 	TIEMPO:  66
+TRACE: 		[P3] 11:28:52.690399 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.690405 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.690411 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.690425 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.690432 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.690437 transition.go:77: 
+TRACE: 		[P3] 11:28:52.690443 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.690449 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.690455 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.690461 transition.go:67: 	TIEMPO:  69
+TRACE: 		[P3] 11:28:52.690467 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.690472 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.690478 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.690484 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.690490 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.690496 transition.go:77: 
+TRACE: 		[P3] 11:28:52.690502 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.690508 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.690514 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.690521 transition.go:153: 			 2
+TRACE: 		[P3] 11:28:52.690527 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+INFO: 		[P3] 11:28:52.690537 simulation_engine.go:88: Sending event { INDTRANS: 1,	SENDER: P3,	TIEMPO: 72,	CSTE: -1 } to node [P0]
+TRACE: 		[P3] 11:28:52.690631 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.690673 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.690681 simulation_engine.go:279: Eventos locales: [  ]
+TRACE: 		[P3] 11:28:52.690689 simulation_engine.go:280: Partners FIFO --> 	P2: [  ], 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 
+TRACE: 		[P3] 11:28:52.690701 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.690708 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.690754 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.690832 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.690919 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.690999 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.691051 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.691070 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691082 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691089 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.691178 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691219 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691233 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691240 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.691270 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691311 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691321 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691326 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.691376 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691432 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691438 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691443 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.691922 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691978 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 72,	NULL }
+TRACE: 		[P3] 11:28:52.691993 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.692053 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.692180 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.692244 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.692285 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.692404 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.692509 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.692559 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.692578 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.692590 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.692599 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.692687 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.692724 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.692734 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.692739 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.693013 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.693044 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.693058 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.693067 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.694383 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.694431 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.694443 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.694448 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.695079 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.695133 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 75,	NULL }
+TRACE: 		[P3] 11:28:52.695149 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.695214 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.695312 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.695328 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.695426 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.695532 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.695711 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.695773 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.695790 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.695805 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.695811 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.695883 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.695936 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.695951 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.695959 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.696110 Node.go:106: Received event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 78,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.696149 simulation_engine.go:254: Adding received event to incFIFO: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 78,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.696165 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.696173 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.696480 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.696517 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.696530 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.696535 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.697985 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 78,	NULL }
+TRACE: 		[P3] 11:28:52.698104 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.698121 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 78,	NULL }
+INFO: 		[P3] 11:28:52.698142 simulation_engine.go:205: Lower event is remote: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 78,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.698155 simulation_engine.go:289: +++ NEXT CLOCK: 78 +++
+INFO: 		[P3] 11:28:52.698169 simulation_engine.go:117: Processing next event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 78,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.698181 simulation_engine.go:266: ####################### CLK = 78 #######################
+TRACE: 		[P3] 11:28:52.698188 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.698204 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.698211 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.698218 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.698224 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.698231 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.698237 transition.go:67: 	TIEMPO:  78
+TRACE: 		[P3] 11:28:52.698243 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.698250 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.698256 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.698263 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.698269 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.698275 transition.go:77: 
+TRACE: 		[P3] 11:28:52.698281 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.698287 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.698294 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.698300 transition.go:67: 	TIEMPO:  66
+TRACE: 		[P3] 11:28:52.698306 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.698326 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.698333 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.698339 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.698346 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.698351 transition.go:77: 
+TRACE: 		[P3] 11:28:52.698356 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.698362 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.698368 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.698374 transition.go:67: 	TIEMPO:  69
+TRACE: 		[P3] 11:28:52.698380 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.698386 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.698392 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.698398 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.698404 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.698409 transition.go:77: 
+TRACE: 		[P3] 11:28:52.698414 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.698421 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.698428 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.698434 transition.go:153: 			 0
+TRACE: 		[P3] 11:28:52.698440 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.698454 simulation_engine.go:91: Appending local event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.698463 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.698474 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.698487 simulation_engine.go:280: Partners FIFO --> 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 	P2: [  ], 
+TRACE: 		[P3] 11:28:52.698494 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.698504 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 }, lowerFIFOtime: 78
+TRACE: 		[P3] 11:28:52.698513 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.698596 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.698707 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.698799 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.698914 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.699025 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.699081 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.699099 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699118 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 }, lowerFIFOtime: 78
+TRACE: 		[P3] 11:28:52.699129 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699137 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.699253 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699301 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699316 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 }, lowerFIFOtime: 78
+TRACE: 		[P3] 11:28:52.699322 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699327 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.699386 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699451 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699462 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 }, lowerFIFOtime: 78
+TRACE: 		[P3] 11:28:52.699471 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699476 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.699716 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699771 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699787 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 }, lowerFIFOtime: 78
+TRACE: 		[P3] 11:28:52.699798 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699811 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.699817 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699862 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 81,	NULL }
+TRACE: 		[P3] 11:28:52.699876 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 }, lowerFIFOtime: 81
+INFO: 		[P3] 11:28:52.699886 simulation_engine.go:200: Lower event is local: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.699895 simulation_engine.go:289: +++ NEXT CLOCK: 81 +++
+INFO: 		[P3] 11:28:52.699909 simulation_engine.go:117: Processing next event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 81,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.699918 simulation_engine.go:266: ####################### CLK = 81 #######################
+TRACE: 		[P3] 11:28:52.699925 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.699932 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.699938 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.699944 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.699950 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.699957 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.699964 transition.go:67: 	TIEMPO:  78
+TRACE: 		[P3] 11:28:52.699970 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.699977 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.699984 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.699989 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.699996 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.700008 transition.go:77: 
+TRACE: 		[P3] 11:28:52.700014 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.700034 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.700041 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.700048 transition.go:67: 	TIEMPO:  81
+TRACE: 		[P3] 11:28:52.700064 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.700071 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.700077 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.700084 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.700091 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.700098 transition.go:77: 
+TRACE: 		[P3] 11:28:52.700104 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.700118 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.700125 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.700131 transition.go:67: 	TIEMPO:  69
+TRACE: 		[P3] 11:28:52.700138 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.700143 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.700150 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.700156 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.700163 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.700175 transition.go:77: 
+TRACE: 		[P3] 11:28:52.700181 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.700187 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.700194 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.700200 transition.go:153: 			 1
+TRACE: 		[P3] 11:28:52.700208 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.700219 simulation_engine.go:91: Appending local event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.700226 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.700238 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.700250 simulation_engine.go:280: Partners FIFO --> 	P2: [  ], 	P4: [  ], 	P5: [  ], 	P0: [  ], 	P1: [  ], 
+TRACE: 		[P3] 11:28:52.700258 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.700268 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 }, lowerFIFOtime: 81
+TRACE: 		[P3] 11:28:52.700278 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.700395 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.700492 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.700575 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.700657 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.700667 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.700738 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.700789 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.700814 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.700828 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 }, lowerFIFOtime: 81
+TRACE: 		[P3] 11:28:52.700837 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.700842 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.700914 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.700961 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.700972 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 }, lowerFIFOtime: 81
+TRACE: 		[P3] 11:28:52.700978 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.700982 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.701343 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.701387 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.701397 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 }, lowerFIFOtime: 81
+TRACE: 		[P3] 11:28:52.701403 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.701407 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.701783 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.701824 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.701836 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 }, lowerFIFOtime: 81
+TRACE: 		[P3] 11:28:52.701842 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.701846 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.703097 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.703146 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 84,	NULL }
+TRACE: 		[P3] 11:28:52.703162 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 }, lowerFIFOtime: 84
+INFO: 		[P3] 11:28:52.703173 simulation_engine.go:200: Lower event is local: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.703191 simulation_engine.go:289: +++ NEXT CLOCK: 84 +++
+INFO: 		[P3] 11:28:52.703202 simulation_engine.go:117: Processing next event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 84,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.703209 simulation_engine.go:266: ####################### CLK = 84 #######################
+TRACE: 		[P3] 11:28:52.703215 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.703222 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.703228 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.703234 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.703241 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.703247 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.703254 transition.go:67: 	TIEMPO:  78
+TRACE: 		[P3] 11:28:52.703260 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.703269 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.703276 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.703283 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.703289 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.703297 transition.go:77: 
+TRACE: 		[P3] 11:28:52.703303 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.703310 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.703317 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.703323 transition.go:67: 	TIEMPO:  81
+TRACE: 		[P3] 11:28:52.703332 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.703337 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.703343 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.703349 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.703356 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.703362 transition.go:77: 
+TRACE: 		[P3] 11:28:52.703368 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.703374 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.703380 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.703385 transition.go:67: 	TIEMPO:  84
+TRACE: 		[P3] 11:28:52.703392 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.703398 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.703403 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.703409 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.703416 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.703430 transition.go:77: 
+TRACE: 		[P3] 11:28:52.703438 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.703444 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.703450 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.703464 transition.go:153: 			 2
+TRACE: 		[P3] 11:28:52.703471 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.703468 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 87,	NULL }
+INFO: 		[P3] 11:28:52.703490 simulation_engine.go:88: Sending event { INDTRANS: 1,	SENDER: P3,	TIEMPO: 87,	CSTE: -1 } to node [P0]
+TRACE: 		[P3] 11:28:52.703765 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.703821 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.703832 simulation_engine.go:279: Eventos locales: [  ]
+TRACE: 		[P3] 11:28:52.703845 simulation_engine.go:280: Partners FIFO --> 	P5: [  ], 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 
+TRACE: 		[P3] 11:28:52.703852 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.703863 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.703942 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.704053 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.704155 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.704254 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.704303 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.704321 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704334 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704343 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.704435 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704545 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704581 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704594 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704602 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.704612 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704622 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704630 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.704719 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704823 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704858 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704872 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704880 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.704890 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 87,	NULL }
+TRACE: 		[P3] 11:28:52.704901 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.704980 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.705081 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.705181 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.705241 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705271 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.705381 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.705426 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.705446 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705460 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705470 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.705565 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705614 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705628 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705636 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.705675 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705717 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705730 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705738 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.705779 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705820 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705830 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.705837 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.706436 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.706548 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.706593 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 90,	NULL }
+TRACE: 		[P3] 11:28:52.706603 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.706652 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.706789 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.706885 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.706982 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.707083 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.707131 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.707144 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707155 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707163 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.707252 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707357 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707395 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707406 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707410 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.707416 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707421 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707426 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.707485 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707519 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707532 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 93,	NULL }
+TRACE: 		[P3] 11:28:52.707539 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.707925 Node.go:106: Received event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 93,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.707975 simulation_engine.go:254: Adding received event to incFIFO: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 93,	CSTE: -1 }
+INFO: 		[P3] 11:28:52.707990 simulation_engine.go:205: Lower event is remote: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 93,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.708000 simulation_engine.go:289: +++ NEXT CLOCK: 93 +++
+INFO: 		[P3] 11:28:52.708009 simulation_engine.go:117: Processing next event: { INDTRANS: 8,	SENDER: P0,	TIEMPO: 93,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.708016 simulation_engine.go:266: ####################### CLK = 93 #######################
+TRACE: 		[P3] 11:28:52.708029 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.708036 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.708042 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.708048 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.708054 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.708061 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.708067 transition.go:67: 	TIEMPO:  93
+TRACE: 		[P3] 11:28:52.708072 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.708075 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.708080 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.708086 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.708093 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.708098 transition.go:77: 
+TRACE: 		[P3] 11:28:52.708104 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.708115 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.708121 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.708127 transition.go:67: 	TIEMPO:  81
+TRACE: 		[P3] 11:28:52.708134 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.708157 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.708164 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.708170 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.708177 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.708199 transition.go:77: 
+TRACE: 		[P3] 11:28:52.708206 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.708216 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.708224 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.708231 transition.go:67: 	TIEMPO:  84
+TRACE: 		[P3] 11:28:52.708237 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.708243 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.708249 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.708255 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.708261 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.708267 transition.go:77: 
+TRACE: 		[P3] 11:28:52.708279 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.708286 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.708292 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.708299 transition.go:153: 			 0
+TRACE: 		[P3] 11:28:52.708305 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.708314 simulation_engine.go:91: Appending local event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.708322 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.708333 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.708339 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.708346 simulation_engine.go:280: Partners FIFO --> 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 	P0: [  ], 
+TRACE: 		[P3] 11:28:52.708389 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.708399 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 }, lowerFIFOtime: 93
+TRACE: 		[P3] 11:28:52.708409 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.708476 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.708584 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.708681 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.708781 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.708895 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.708943 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.708961 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.708974 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 }, lowerFIFOtime: 93
+TRACE: 		[P3] 11:28:52.708984 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.708991 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.709075 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709195 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709229 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709244 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 }, lowerFIFOtime: 93
+TRACE: 		[P3] 11:28:52.709254 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709261 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.709270 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709280 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 }, lowerFIFOtime: 93
+TRACE: 		[P3] 11:28:52.709291 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709305 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.709393 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709528 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709561 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709588 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 }, lowerFIFOtime: 93
+TRACE: 		[P3] 11:28:52.709598 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709605 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.709614 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 96,	NULL }
+TRACE: 		[P3] 11:28:52.709625 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 }, lowerFIFOtime: 96
+INFO: 		[P3] 11:28:52.709634 simulation_engine.go:200: Lower event is local: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.709643 simulation_engine.go:289: +++ NEXT CLOCK: 96 +++
+INFO: 		[P3] 11:28:52.709653 simulation_engine.go:117: Processing next event: { INDTRANS: 9,	SENDER: P3,	TIEMPO: 96,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.709660 simulation_engine.go:266: ####################### CLK = 96 #######################
+TRACE: 		[P3] 11:28:52.709688 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.709695 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.709702 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.709709 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.709715 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.709725 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.709732 transition.go:67: 	TIEMPO:  93
+TRACE: 		[P3] 11:28:52.709739 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.709745 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.709751 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.709757 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.709763 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.709770 transition.go:77: 
+TRACE: 		[P3] 11:28:52.709776 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.709782 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.709789 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.709795 transition.go:67: 	TIEMPO:  96
+TRACE: 		[P3] 11:28:52.709801 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.709807 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.709813 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.709819 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.709826 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.709832 transition.go:77: 
+TRACE: 		[P3] 11:28:52.709839 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.709851 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.709857 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.709864 transition.go:67: 	TIEMPO:  84
+TRACE: 		[P3] 11:28:52.709870 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.709876 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.709882 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.709888 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.709895 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.709901 transition.go:77: 
+TRACE: 		[P3] 11:28:52.709912 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.709919 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.709925 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.709931 transition.go:153: 			 1
+TRACE: 		[P3] 11:28:52.709938 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+TRACE: 		[P3] 11:28:52.709953 simulation_engine.go:91: Appending local event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.709962 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.709973 simulation_engine.go:279: Eventos locales: [ { INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 },  ]
+TRACE: 		[P3] 11:28:52.709986 simulation_engine.go:280: Partners FIFO --> 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 
+TRACE: 		[P3] 11:28:52.709993 simulation_engine.go:281: ·········· Final lista eventos ······················
+TRACE: 		[P3] 11:28:52.710003 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 }, lowerFIFOtime: 96
+TRACE: 		[P3] 11:28:52.710016 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.710079 Node.go:121: Sending event to: 127.0.0.1:16094
+TRACE: 		[P3] 11:28:52.710144 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.710187 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.710517 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.710608 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.710711 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.710760 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.710787 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P0,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.710807 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 }, lowerFIFOtime: 96
+TRACE: 		[P3] 11:28:52.710818 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.710826 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.710912 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711017 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711057 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P5,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711073 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 }, lowerFIFOtime: 96
+TRACE: 		[P3] 11:28:52.711083 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711095 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.711104 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P1,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711115 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 }, lowerFIFOtime: 96
+TRACE: 		[P3] 11:28:52.711124 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711132 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.711211 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711318 Node.go:106: Received event: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711354 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P4,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711374 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 }, lowerFIFOtime: 96
+TRACE: 		[P3] 11:28:52.711385 simulation_engine.go:229: Sending NULL event: { INDTRANS: 0,	SENDER: P3,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711394 simulation_engine.go:235: 	Waiting for incoming event...
+TRACE: 		[P3] 11:28:52.711404 simulation_engine.go:251: NULL received: { INDTRANS: 0,	SENDER: P2,	TIEMPO: 99,	NULL }
+TRACE: 		[P3] 11:28:52.711414 simulation_engine.go:169: getLowerEvent: LOCAL->{ INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 }, lowerFIFOtime: 99
+INFO: 		[P3] 11:28:52.711423 simulation_engine.go:200: Lower event is local: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 }
+TRACE: 		[P3] 11:28:52.711432 simulation_engine.go:289: +++ NEXT CLOCK: 99 +++
+INFO: 		[P3] 11:28:52.711440 simulation_engine.go:117: Processing next event: { INDTRANS: 10,	SENDER: P3,	TIEMPO: 99,	CSTE: -1 } .....
+INFO: 		[P3] 11:28:52.711448 simulation_engine.go:266: ####################### CLK = 99 #######################
+TRACE: 		[P3] 11:28:52.711455 lefs.go:165: ========== STRUCT LEFS ==========
+TRACE: 		[P3] 11:28:52.711461 lefs.go:167: 	Nº transiciones:  3
+TRACE: 		[P3] 11:28:52.711468 lefs.go:169: ----- Lista transiciones --------
+TRACE: 		[P3] 11:28:52.711474 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.711480 transition.go:65: IDLOCALTRANSICION:  8
+TRACE: 		[P3] 11:28:52.711487 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.711492 transition.go:67: 	TIEMPO:  93
+TRACE: 		[P3] 11:28:52.711495 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.711499 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.711503 transition.go:71: 	TRANSICION:  8 		CTE:  1
+TRACE: 		[P3] 11:28:52.711509 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.711513 transition.go:75: 		TRANSICION: 9		CTE: -1
+TRACE: 		[P3] 11:28:52.711516 transition.go:77: 
+TRACE: 		[P3] 11:28:52.711520 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.711524 transition.go:65: IDLOCALTRANSICION:  9
+TRACE: 		[P3] 11:28:52.711533 transition.go:66: 	VALOR LEF:  1
+TRACE: 		[P3] 11:28:52.711537 transition.go:67: 	TIEMPO:  96
+TRACE: 		[P3] 11:28:52.711543 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.711550 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.711557 transition.go:71: 	TRANSICION:  9 		CTE:  1
+TRACE: 		[P3] 11:28:52.711564 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.711571 transition.go:75: 		TRANSICION: 10		CTE: -1
+TRACE: 		[P3] 11:28:52.711577 transition.go:77: 
+TRACE: 		[P3] 11:28:52.711583 transition.go:64: Dato Transicion:
+TRACE: 		[P3] 11:28:52.711590 transition.go:65: IDLOCALTRANSICION:  10
+TRACE: 		[P3] 11:28:52.711595 transition.go:66: 	VALOR LEF:  0
+TRACE: 		[P3] 11:28:52.711615 transition.go:67: 	TIEMPO:  99
+TRACE: 		[P3] 11:28:52.711621 transition.go:68: 	DURACION DISPARO:  3
+TRACE: 		[P3] 11:28:52.711627 transition.go:69: 	LISTA DE CTES IUL: 
+TRACE: 		[P3] 11:28:52.711639 transition.go:71: 	TRANSICION:  10 		CTE:  1
+TRACE: 		[P3] 11:28:52.711645 transition.go:73: 	LISTA DE CTES PUL: 
+TRACE: 		[P3] 11:28:52.711650 transition.go:75: 		TRANSICION: 1		CTE: -1
+TRACE: 		[P3] 11:28:52.711656 transition.go:77: 
+TRACE: 		[P3] 11:28:52.711662 lefs.go:173: ---- Final lista transiciones ---
+TRACE: 		[P3] 11:28:52.711668 lefs.go:174: ===== FINAL ESTRUCTURA LEFS =====
+TRACE: 		[P3] 11:28:52.711674 simulation_engine.go:269: >>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<
+TRACE: 		[P3] 11:28:52.711681 transition.go:153: 			 2
+TRACE: 		[P3] 11:28:52.711687 simulation_engine.go:271: >>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<
+INFO: 		[P3] 11:28:52.711702 simulation_engine.go:88: Sending event { INDTRANS: 1,	SENDER: P3,	TIEMPO: 102,	CSTE: -1 } to node [P0]
+TRACE: 		[P3] 11:28:52.711833 Node.go:106: Received event: { INDTRANS: -1,	SENDER: P0,	TIEMPO: 90,	CSTE: 0 }
+TRACE: 		[P3] 11:28:52.711837 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.711900 simulation_engine.go:278: ·········· Lista eventos después de disparos ········
+TRACE: 		[P3] 11:28:52.711913 simulation_engine.go:279: Eventos locales: [  ]
+TRACE: 		[P3] 11:28:52.711926 simulation_engine.go:280: Partners FIFO --> 	P0: [  ], 	P1: [  ], 	P2: [  ], 	P4: [  ], 	P5: [  ], 
+TRACE: 		[P3] 11:28:52.711933 simulation_engine.go:281: ·········· Final lista eventos ······················
+INFO: 		[P3] 11:28:52.711942 simulation_engine.go:308: Sending closing event
+TRACE: 		[P3] 11:28:52.712028 Node.go:121: Sending event to: 127.0.0.1:16095
+TRACE: 		[P3] 11:28:52.712135 Node.go:121: Sending event to: 127.0.0.1:16090
+TRACE: 		[P3] 11:28:52.712229 Node.go:121: Sending event to: 127.0.0.1:16091
+TRACE: 		[P3] 11:28:52.712326 Node.go:121: Sending event to: 127.0.0.1:16092
+TRACE: 		[P3] 11:28:52.712405 Node.go:121: Sending event to: 127.0.0.1:16094
+INFO: 		[P3] 11:28:55.712588 simulation_engine.go:334: Eventos por segundo = 4.1236
+INFO: 		[P3] 11:28:55.712670 simulation_engine.go:136: ----------------------------------------
+INFO: 		[P3] 11:28:55.712703 simulation_engine.go:137: Resultados del simulador local
+INFO: 		[P3] 11:28:55.712719 simulation_engine.go:138: ----------------------------------------
+INFO: 		[P3] 11:28:55.712741 simulation_engine.go:144: TIEMPO: 3  -> TRANSICION: 0
+INFO: 		[P3] 11:28:55.712763 simulation_engine.go:144: TIEMPO: 6  -> TRANSICION: 1
+INFO: 		[P3] 11:28:55.712787 simulation_engine.go:144: TIEMPO: 9  -> TRANSICION: 2
+INFO: 		[P3] 11:28:55.712811 simulation_engine.go:144: TIEMPO: 18  -> TRANSICION: 0
+INFO: 		[P3] 11:28:55.712855 simulation_engine.go:144: TIEMPO: 21  -> TRANSICION: 1
+INFO: 		[P3] 11:28:55.712879 simulation_engine.go:144: TIEMPO: 24  -> TRANSICION: 2
+INFO: 		[P3] 11:28:55.712903 simulation_engine.go:144: TIEMPO: 33  -> TRANSICION: 0
+INFO: 		[P3] 11:28:55.712929 simulation_engine.go:144: TIEMPO: 36  -> TRANSICION: 1
+INFO: 		[P3] 11:28:55.712945 simulation_engine.go:144: TIEMPO: 39  -> TRANSICION: 2
+INFO: 		[P3] 11:28:55.712962 simulation_engine.go:144: TIEMPO: 48  -> TRANSICION: 0
+INFO: 		[P3] 11:28:55.713016 simulation_engine.go:144: TIEMPO: 51  -> TRANSICION: 1
+INFO: 		[P3] 11:28:55.713037 simulation_engine.go:144: TIEMPO: 54  -> TRANSICION: 2
+INFO: 		[P3] 11:28:55.713059 simulation_engine.go:144: TIEMPO: 63  -> TRANSICION: 0
+INFO: 		[P3] 11:28:55.713081 simulation_engine.go:144: TIEMPO: 66  -> TRANSICION: 1
+INFO: 		[P3] 11:28:55.713106 simulation_engine.go:144: TIEMPO: 69  -> TRANSICION: 2
+INFO: 		[P3] 11:28:55.713133 simulation_engine.go:144: TIEMPO: 78  -> TRANSICION: 0
+INFO: 		[P3] 11:28:55.713160 simulation_engine.go:144: TIEMPO: 81  -> TRANSICION: 1
+INFO: 		[P3] 11:28:55.713181 simulation_engine.go:144: TIEMPO: 84  -> TRANSICION: 2
+INFO: 		[P3] 11:28:55.713201 simulation_engine.go:144: TIEMPO: 93  -> TRANSICION: 0
+INFO: 		[P3] 11:28:55.713223 simulation_engine.go:144: TIEMPO: 96  -> TRANSICION: 1
+INFO: 		[P3] 11:28:55.713245 simulation_engine.go:144: TIEMPO: 99  -> TRANSICION: 2
+INFO: 		[P3] 11:28:55.713269 simulation_engine.go:147: ========== TOTAL DE TRANSICIONES DISPARADAS = 21
+INFO: 		[P3] 11:28:55.713289 simulation_engine.go:339: ---------------------
+INFO: 		[P3] 11:28:55.713327 simulation_engine.go:340: TIEMPO SIMULADO en ciclos: 100
+INFO: 		[P3] 11:28:55.713349 simulation_engine.go:341: TIEMPO ejecución REAL simulación: 5.092699226s

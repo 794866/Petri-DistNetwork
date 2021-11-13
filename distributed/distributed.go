@@ -1,0 +1,50 @@
+// Este programa requiere 2 parámetros de entrada :
+//      - Nombre fichero json de Lefs
+//        - Número de ciclo final
+//
+// Ejemplo : censim  testdata/PrimerEjemplo.rdp.subred0.json  5
+package main
+
+import (
+	"distributed/packages/simulator"
+	"distributed/packages/utils"
+	"fmt"
+	"os"
+	"strconv"
+)
+
+func main() {
+
+	if len(os.Args) != 4 {
+		panic("bad usage: distim <nodeName> <files_prefix> <finalClk>")
+	}
+
+	var nodeName, filesPrefix string
+	nodeName = os.Args[1]
+	filesPrefix = os.Args[2]
+	netFile, lefsFile := utils.ParseFilesNames(nodeName, filesPrefix)
+
+	// init logger
+	logger := utils.InitLoggers(filesPrefix, nodeName)
+
+	// read partners and transition mapping to them
+	net := simulator.ReadPartners(netFile)
+	partners := net.Nodes
+	myNode := partners[nodeName]
+	delete(partners, nodeName)
+	logger.Info.Printf("[%s] Reading partners: \n%s", nodeName, partners)
+
+	// Create local node
+	node := simulator.MakeNode(nodeName, myNode.Port, partners, logger)
+
+	// Carga de la subred
+	lefs, err := simulator.LoadLefs(lefsFile, logger)
+	if err != nil {
+		println("Couln't load the Petri Net file !")
+	}
+	cicloFinal, _ := strconv.Atoi(os.Args[3])
+	ms := simulator.MakeMotorSimulation(node, lefs, net.MapTransNode, simulator.TypeClock(cicloFinal), logger)
+
+	fmt.Printf("[%s] Simulating net...\n", nodeName)
+	ms.SimularPeriodo()
+}
