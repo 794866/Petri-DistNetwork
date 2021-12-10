@@ -13,10 +13,10 @@ type Logger struct {
 	Error   *log.Logger
 }
 
-func InitLoggers(exp string, name string) *Logger {
+func InitLoggers(name string) *Logger {
 
 	// Initialize log
-	fLog, err := os.OpenFile(LoggerPath+exp+"/Log_"+name+".log", os.O_CREATE|os.O_WRONLY, 0666)
+	fLog, err := os.OpenFile(LoggerPath+"/Log_"+name+".log", os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		log.Fatalln("Failed to open log file:", err)
 	}

@@ -5,7 +5,7 @@ import "time"
 const HomePath = "/home/uri/"
 const AbsWorkPath = "/home/uri/go/src/uri/Petri-DistNetwork/distributed/"
 const RelOutputPath = "results/"
-const LoggerPath = AbsWorkPath + "results/"
+const LoggerPath = AbsWorkPath + "results/6subredes"
 const RelTestDataPath = "testdata/"
 const MaxAttempsConnect = 5
 const PeriodRetry = 2 * time.Second // second between connection retries

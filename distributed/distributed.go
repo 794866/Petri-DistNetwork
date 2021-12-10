@@ -19,13 +19,13 @@ func main() {
 		panic("bad usage: distim <nodeName> <files_prefix> <finalClk>")
 	}
 
-	var nodeName, filesPrefix string
+	var nodeName string
 	nodeName = os.Args[1]
-	filesPrefix = os.Args[2]
-	netFile, lefsFile := utils.ParseFilesNames(nodeName, filesPrefix)
+	//filesPrefix = os.Args[2]
+	netFile, lefsFile := utils.ParseFilesNames(nodeName)
 
 	// init logger
-	logger := utils.InitLoggers(filesPrefix, nodeName)
+	logger := utils.InitLoggers(nodeName)
 
 	// read partners and transition mapping to them
 	net := simulator.ReadPartners(netFile)
@@ -38,7 +38,7 @@ func main() {
 	node := simulator.MakeNode(nodeName, myNode.Port, partners, logger)
 
 	// Carga de la subred
-	lefs, err := simulator.LoadLefs(lefsFile, logger)
+	lefs, err := simulator.Load(lefsFile, logger)
 	if err != nil {
 		println("Couln't load the Petri Net file !")
 	}

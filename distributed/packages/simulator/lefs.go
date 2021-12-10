@@ -3,9 +3,9 @@
 package simulator
 
 import (
+	"distributed/packages/utils"
 	"encoding/json"
 	"os"
-	"distributed/packages/utils"
 )
 
 //type TypeIndexSubnet int32
@@ -24,7 +24,7 @@ type Lefs struct {
 }
 
 // Load obtains Lefs from a json file
-func LoadLefs(filename string, logger *utils.Logger) (Lefs, error) {
+func Load(filename string, logger *utils.Logger) (Lefs, error) {
 	file, err := os.Open(utils.AbsWorkPath + utils.RelTestDataPath + filename)
 	if err != nil {
 		logger.Error.Printf("open json lefs file: %v\n", err)

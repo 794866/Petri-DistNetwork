@@ -123,9 +123,9 @@ func RunCommandSSH(cmd string, conn *ssh.Client, wg *sync.WaitGroup) {
 	}
 }
 
-func ParseFilesNames(nodeName string, filesPrefix string) (string, string) {
+func ParseFilesNames(nodeName string) (string, string) {
 	nodeInd, _ := strconv.Atoi(nodeName[len(nodeName)-1:])
-	lefsFile := fmt.Sprintf("%s.subred%d.json", filesPrefix, nodeInd)
-	netFile := fmt.Sprintf("%s.network.json", filesPrefix)
+	lefsFile := fmt.Sprintf("6subredes.subred%d.json", nodeInd)
+	netFile := fmt.Sprintf("6subredes.network.json")
 	return netFile, lefsFile
 }
