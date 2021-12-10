@@ -61,14 +61,14 @@ func startNodes(filesPrefix string, finishClk simulator.TypeClock, partners simu
 	}
 }
 
-func testXSubnets(nSubnets int, filesPrefix string, finalClk simulator.TypeClock) {
+func TestFuncTest(t *testing.T) {
 	// WaitGroup for synchronisation goroutines, test wait until each net finish
 	var wg sync.WaitGroup
-	wg.Add(nSubnets - 1)
+	wg.Add(5)
 
 	// Setup Motor Simulation of root net
-	ms := CreateMotorSimulation("P0", filesPrefix, finalClk)
-	startNodes(filesPrefix, finalClk, ms.Node.Partners, &wg)
+	ms := CreateMotorSimulation("P0", "6subredes", 100)
+	startNodes("6subredes", 100, ms.Node.Partners, &wg)
 	fmt.Println("[P0] Simulating net...")
 	ms.SimularPeriodo()
 	fmt.Printf("[%s] Simulación terminada\n", ms.Node.Name)
@@ -76,23 +76,40 @@ func testXSubnets(nSubnets int, filesPrefix string, finalClk simulator.TypeClock
 	terminate(ms)
 }
 
-func Test2SubNets2Br(t *testing.T) {
-	testXSubnets(2, "2subredes", FIN_CLK)
-}
 
-//func Test3SubNets2Br(t *testing.T) {
-//	testXSubnets(3, "3subredes", FIN_CLK)
+//
+//func testXSubnets(nSubnets int, filesPrefix string, finalClk simulator.TypeClock) {
+//	// WaitGroup for synchronisation goroutines, test wait until each net finish
+//	var wg sync.WaitGroup
+//	wg.Add(nSubnets - 1)
+//
+//	// Setup Motor Simulation of root net
+//	ms := CreateMotorSimulation("P0", filesPrefix, finalClk)
+//	startNodes(filesPrefix, finalClk, ms.Node.Partners, &wg)
+//	fmt.Println("[P0] Simulating net...")
+//	ms.SimularPeriodo()
+//	fmt.Printf("[%s] Simulación terminada\n", ms.Node.Name)
+//	wg.Wait()
+//	terminate(ms)
 //}
-
-func Test6SubNets5BrHomogen(t *testing.T) {
-	testXSubnets(6, "6subredes", FIN_CLK)
-}
-
-func Test6SubNets5Br1BrSlow(t *testing.T) {
-	testXSubnets(6, "6subredes1lenta", FIN_CLK)
-}
-
-func Test6SubNets5BrLA(t *testing.T) {
-	testXSubnets(6, "6subredesLA", FIN_CLK)
-}
-
+//
+//func Test2SubNets2Br(t *testing.T) {
+//	testXSubnets(2, "2subredes", FIN_CLK)
+//}
+//
+////func Test3SubNets2Br(t *testing.T) {
+////	testXSubnets(3, "3subredes", FIN_CLK)
+////}
+//
+//func Test6SubNets5BrHomogen(t *testing.T) {
+//	testXSubnets(6, "6subredes", FIN_CLK)
+//}
+//
+//func Test6SubNets5Br1BrSlow(t *testing.T) {
+//	testXSubnets(6, "6subredes1lenta", FIN_CLK)
+//}
+//
+//func Test6SubNets5BrLA(t *testing.T) {
+//	testXSubnets(6, "6subredesLA", FIN_CLK)
+//}
+//

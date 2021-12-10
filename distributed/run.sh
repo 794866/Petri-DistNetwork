@@ -6,7 +6,4 @@ rm -r results/*
 echo "Building project..."
 go build distributed.go
 
-for i in ${TestCases}; do
-  echo "Running test ${i} ->->->->"
-  go test -v  -run "$i" distributed_test.go
-done
+go test -v distributed_test.go
