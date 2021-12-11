@@ -44,8 +44,8 @@ func MakeMotorSimulation(node *Node, alLaLef Lefs, transDistr MapTransitionNode,
 	m.iiRelojLocal = 0
 	m.iiFinClk = finClk
 	m.ilMisLefs = alLaLef
-	m.IlEventosPend = MakeEventList(1000) //aun siendo dinámicos...
-	m.ivTransResults = make([]ResultadoTransition, 0, 1000)
+	m.IlEventosPend = MakeEventList(100) //aun siendo dinámicos...
+	m.ivTransResults = make([]ResultadoTransition, 0, utils.MaxEventsQueueCap)
 	m.EventNumber = 0
 	m.MapTransitionsNode = transDistr
 	m.Logger = logger
@@ -141,9 +141,9 @@ func (se SimulationEngine) devolverResultados() {
 	}
 
 	for _, liResult := range se.ivTransResults {
-		se.Logger.Info.Printf("TIEMPO: %d  -> " +
-									 "TRANSICION: %d\n", liResult.ValorRelojDisparo, liResult.CodTransition)
+		se.Logger.Info.Printf("TIEMPO: %d  -> TRANSICION: %d\n", liResult.ValorRelojDisparo, liResult.CodTransition)
 	}
+
 	se.Logger.Info.Printf("========== TOTAL DE TRANSICIONES DISPARADAS = %d\n", len(se.ivTransResults))
 }
 
