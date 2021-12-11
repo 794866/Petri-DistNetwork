@@ -24,7 +24,7 @@ func main() {
 	//filesPrefix = os.Args[2]
 	netFile, lefsFile := utils.ParseFilesNames(nodeName)
 
-	// init logger
+	// init log
 	logger := utils.InitLoggers(nodeName)
 
 	// read partners and transition mapping to them

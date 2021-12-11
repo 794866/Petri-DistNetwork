@@ -20,12 +20,12 @@ type Lefs struct {
 	// Identificadores de las transiciones sensibilizadas para
 	// T = Reloj local actual. Slice que funciona como Stack
 	TransSensib TransitionStack
-	Logger      *utils.Logger
+	Logger      *utils.LogStruct
 }
 
 // Load obtains Lefs from a json file
-func Load(filename string, logger *utils.Logger) (Lefs, error) {
-	file, err := os.Open(utils.AbsWorkPath + utils.RelTestDataPath + filename)
+func Load(filename string, logger *utils.LogStruct) (Lefs, error) {
+	file, err := os.Open("/home/uri/go/src/uri/Petri-DistNetwork/distributed/testdata/" + filename)
 	if err != nil {
 		logger.Error.Printf("open json lefs file: %v\n", err)
 		return Lefs{}, err

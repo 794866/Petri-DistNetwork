@@ -34,11 +34,11 @@ type SimulationEngine struct {
 	MapTransitionsNode MapTransitionNode     // diccionario con el nombre del nodo en el que se encuentra cada transición
 	ChRecvEv           chan Event
 	ChFinish           chan bool
-	Logger             *utils.Logger
+	Logger             *utils.LogStruct
 }
 
 // MakeMotorSimulation : inicializar SimulationEngine struct
-func MakeMotorSimulation(node *Node, alLaLef Lefs, transDistr MapTransitionNode, finClk TypeClock, logger *utils.Logger) *SimulationEngine {
+func MakeMotorSimulation(node *Node, alLaLef Lefs, transDistr MapTransitionNode, finClk TypeClock, logger *utils.LogStruct) *SimulationEngine {
 	m := SimulationEngine{}
 	m.Node = *node
 	m.iiRelojLocal = 0

@@ -5,7 +5,9 @@ import (
 	"os"
 )
 
-type Logger struct {
+const loggerPath = "/home/uri/go/src/uri/Petri-DistNetwork/distributed/Logs/6subredes/"
+
+type LogStruct struct {
 	// Logs
 	Trace   *log.Logger
 	Info    *log.Logger
@@ -13,26 +15,17 @@ type Logger struct {
 	Error   *log.Logger
 }
 
-func InitLoggers(name string) *Logger {
-
-	// Initialize log
-	fLog, err := os.OpenFile(LoggerPath+"/Log_"+name+".log", os.O_CREATE|os.O_WRONLY, 0666)
+func InitLoggers(processName string) *LogStruct {
+	//Reading PLs logs file
+	logFile, err := os.OpenFile(loggerPath+"Log"+processName+".log", os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		log.Fatalln("Failed to open log file:", err)
 	}
-
-	myLogger := Logger{}
-	myLogger.Trace = log.New(fLog,
-		"TRACE: \t\t["+name+"] ", log.Ltime|log.Lmicroseconds|log.Lshortfile)
-
-	myLogger.Info = log.New(fLog,
-		"INFO: \t\t["+name+"] ", log.Ltime|log.Lmicroseconds|log.Lshortfile)
-
-	myLogger.Warning = log.New(fLog,
-		"WARNING: \t["+name+"] ", log.Ltime|log.Lmicroseconds|log.Lshortfile)
-
-	myLogger.Error = log.New(fLog,
-		"ERROR: \t\t["+name+"] ", log.Ltime|log.Lmicroseconds|log.Lshortfile)
-
-	return &myLogger
+	//Initialization log
+	Logs := LogStruct{}
+	Logs.Trace = log.New(logFile,"TRACE :["+processName+"] ", log.Ltime|log.Lmicroseconds|log.Lshortfile)
+	Logs.Info = log.New(logFile,"INFO :["+processName+"] ", log.Ltime|log.Lmicroseconds|log.Lshortfile)
+	Logs.Warning = log.New(logFile,"WARNING :["+processName+"] ", log.Ltime|log.Lmicroseconds|log.Lshortfile)
+	Logs.Error = log.New(logFile,"ERROR :["+processName+"] ", log.Ltime|log.Lmicroseconds|log.Lshortfile)
+	return &Logs
 }

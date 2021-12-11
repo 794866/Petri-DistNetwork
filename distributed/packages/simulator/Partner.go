@@ -1,12 +1,12 @@
 package simulator
 
 import (
-	"distributed/packages/utils"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 )
 
+const networkPath = "/home/uri/go/src/uri/Petri-DistNetwork/distributed/testdata/"
 type Partners map[string]Partner // Partner name is the key of the map with all partners
 
 type Partner struct {
@@ -25,29 +25,29 @@ type Network struct {
 	MapTransNode MapTransitionNode `json:"TransitionsMapping"`
 }
 
-func ReadPartners(filename string) *Network {
+func ReadPartners(networkFile string) *Network {
 
-	// read file
-	data, err := ioutil.ReadFile(utils.AbsWorkPath + utils.RelTestDataPath + filename)
+	// read network file json with PLs List - IP && ports
+	data, err := ioutil.ReadFile(networkPath + networkFile)
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println("Reading network configuration file...")
+	fmt.Println("JSON Network file OK!")
 
-	var net Network
+	var network Network
 	// parse content of json file to Config struct
-	err = json.Unmarshal(data, &net)
-	if err != nil {
+	err = json.Unmarshal(data, &network)
+	if err != nil  {
 		panic(err)
 	}
-	for name, p := range net.Nodes {
+	for name, p := range network.Nodes {
 		p.RemoteSafeTime = 0
 		p.LastTimeSent = 0
 		p.IncomingEvFIFO = MakeEventList(5)
-		net.Nodes[name] = p
+		network.Nodes[name] = p
 	}
-	return &net
+	return &network
 }
 
 func (p Partners) String() string {

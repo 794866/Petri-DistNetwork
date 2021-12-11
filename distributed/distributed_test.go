@@ -13,7 +13,7 @@ const commandPath = "/home/uri/go/src/uri/Petri-DistNetwork/distributed/distribu
 
 func CreateMotorSimulation() *simulator.SimulationEngine {
 	// init logger, create files and build files names
-	err := os.Mkdir(utils.RelOutputPath+"6subredes", os.ModePerm)
+	err := os.Mkdir("Logs/6subredes", os.ModePerm)
 	if err != nil {
 		fmt.Printf("Error creating log dir: %s\n", err)
 	}

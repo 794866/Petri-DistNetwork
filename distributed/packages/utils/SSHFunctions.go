@@ -17,7 +17,7 @@ import (
 
 const (
 	SshPort        = "22"
-	PrivateKeyPath = HomePath + ".ssh/id_rsa"
+	PrivateKeyPath = "/home/uri/.ssh/id_rsa"
 )
 
 func ConnectSSH(user string, host string) *ssh.Client {

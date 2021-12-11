@@ -15,7 +15,7 @@ type Node struct {
 	Listener net.Listener
 	Port     int
 	Partners Partners // V t € output transition, E partner
-	Logger   *utils.Logger
+	Logger   *utils.LogStruct
 }
 
 type ErrorNode struct {
@@ -27,7 +27,7 @@ func (e *ErrorNode) Error() string {
 }
 
 // MakeNode : inicializar MakeNode struct
-func MakeNode(name string, port int, partners Partners, logger *utils.Logger) *Node {
+func MakeNode(name string, port int, partners Partners, logger *utils.LogStruct) *Node {
 	gob.Register(Event{})
 	// Open Listener port
 	listener, err := net.Listen("tcp", ":"+strconv.Itoa(port))

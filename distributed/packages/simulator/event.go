@@ -86,7 +86,7 @@ func (e Event) getSender() string {
 }
 
 // Imprime atributos de evento para depurar errores
-func (e Event) Imprime(i int, l *utils.Logger) {
+func (e Event) Imprime(i int, l *utils.LogStruct) {
 	l.Trace.Println("  Evento -> ", i)
 	l.Trace.Println("    TIEMPO: ", e.IiTiempo)
 	l.Trace.Println("    TRANSICION: ", e.IiTransicion)
@@ -193,7 +193,7 @@ func (el *EventList) hayEventos(aiTiempo TypeClock) bool {
 }
 
 // Imprime la lista de eventos para depurar errores
-func (el EventList) Imprime(l *utils.Logger) {
+func (el EventList) Imprime(l *utils.LogStruct) {
 	l.Trace.Println("Estructura EventList")
 	for i, e := range el {
 		e.Imprime(i, l)

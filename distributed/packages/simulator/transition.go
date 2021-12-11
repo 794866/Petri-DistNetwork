@@ -60,7 +60,7 @@ func (t *Transition) updateFuncValue(aiValLef TypeConst) {
 }
 
 // Imprime los atributos de una transicion para depurar errores
-func (t *Transition) Imprime(logger *utils.Logger) {
+func (t *Transition) Imprime(logger *utils.LogStruct) {
 	logger.Trace.Println("Dato Transicion:")
 	logger.Trace.Println("IDLOCALTRANSICION: ", t.IiIndGlobal)
 	logger.Trace.Println("\tVALOR LEF: ", t.IiValorLef)
@@ -78,7 +78,7 @@ func (t *Transition) Imprime(logger *utils.Logger) {
 }
 
 // ImprimeValores de la transición
-func (t *Transition) ImprimeValores(logger *utils.Logger) {
+func (t *Transition) ImprimeValores(logger *utils.LogStruct) {
 	logger.Trace.Println("Transicion -> ")
 	logger.Trace.Println("\tIDLOCALTRANSICION: ", t.IiIndGlobal)
 	logger.Trace.Println("\t\tVALOR LEF: ", t.IiValorLef)
@@ -105,7 +105,7 @@ func (tl *TransitionList) getLocalIndTrans(indGlob IndTrans) IndTrans {
 	return TRANS_IND_ERROR
 }
 
-func (tl TransitionList) ImprimeTL(logger *utils.Logger) {
+func (tl TransitionList) ImprimeTL(logger *utils.LogStruct) {
 	logger.Trace.Println("Transition list: [ ")
 	for _, tr := range tl {
 		logger.Trace.Println(tr)
@@ -145,7 +145,7 @@ func (st TransitionStack) isEmpty() bool {
 	return len(st) == 0
 }
 
-func (st TransitionStack) ImprimeTransStack(logger *utils.Logger) {
+func (st TransitionStack) ImprimeTransStack(logger *utils.LogStruct) {
 	if st.isEmpty() {
 		logger.Trace.Println("\tStack TRANSICIONES VACIA")
 	} else {
