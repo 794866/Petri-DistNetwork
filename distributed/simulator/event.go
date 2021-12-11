@@ -2,7 +2,6 @@
 package simulator
 
 import (
-	"distributed/packages/utils"
 	"fmt"
 )
 
@@ -86,7 +85,7 @@ func (e Event) getSource() string {
 }
 
 // Imprime atributos de evento para depurar errores
-func (e Event) Imprime(i int, l *utils.LogStruct) {
+func (e Event) Imprime(i int, l *LogStruct) {
 	l.Trace.Println("  Evento -> ", i)
 	l.Trace.Println("    TIEMPO: ", e.IiTiempo)
 	l.Trace.Println("    TRANSICION: ", e.IiTransicion)
@@ -123,8 +122,8 @@ func (el EventList) longitud() int {
 	return len(el)
 }
 
-// isEmpty: devuelve true si y solo si la lista está vacía
-func (el EventList) isEmpty() bool {
+// emptyEventList: devuelve true si y solo si la lista está vacía
+func (el EventList) emptyEventList() bool {
 	return len(el) == 0
 }
 
@@ -193,7 +192,7 @@ func (el *EventList) hayEventos(aiTiempo TypeClock) bool {
 }
 
 // Imprime la lista de eventos para depurar errores
-func (el EventList) Imprime(l *utils.LogStruct) {
+func (el EventList) Imprime(l *LogStruct) {
 	l.Trace.Println("Estructura EventList")
 	for i, e := range el {
 		e.Imprime(i, l)

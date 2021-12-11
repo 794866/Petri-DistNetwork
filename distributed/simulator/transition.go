@@ -1,9 +1,5 @@
 package simulator
 
-import (
-	"distributed/packages/utils"
-)
-
 //--------------------------------------------------------------------------
 
 const TRANS_IND_ERROR IndTrans = -1
@@ -60,7 +56,7 @@ func (t *Transition) updateFuncValue(aiValLef TypeConst) {
 }
 
 // Imprime los atributos de una transicion para depurar errores
-func (t *Transition) Imprime(Log *utils.LogStruct) {
+func (t *Transition) Imprime(Log *LogStruct) {
 	Log.Trace.Println("Dato Transicion:")
 	Log.Trace.Println("IDLOCALTRANSICION: ", t.IiIndGlobal)
 	Log.Trace.Println("\tVALOR LEF: ", t.IiValorLef)
@@ -78,7 +74,7 @@ func (t *Transition) Imprime(Log *utils.LogStruct) {
 }
 
 // ImprimeValores de la transición
-func (t *Transition) ImprimeValores(Log *utils.LogStruct) {
+func (t *Transition) ImprimeValores(Log *LogStruct) {
 	Log.Trace.Println("Transicion -> ")
 	Log.Trace.Println("\tIDLOCALTRANSICION: ", t.IiIndGlobal)
 	Log.Trace.Println("\t\tVALOR LEF: ", t.IiValorLef)
@@ -105,7 +101,7 @@ func (tl *TransitionList) getLocalIndTrans(indGlob IndTrans) IndTrans {
 	return TRANS_IND_ERROR
 }
 
-func (tl TransitionList) ImprimeTL(Log *utils.LogStruct) {
+func (tl TransitionList) ImprimeTL(Log *LogStruct) {
 	Log.Trace.Println("Transition list: [ ")
 	for _, tr := range tl {
 		Log.Trace.Println(tr)
@@ -130,7 +126,7 @@ func (st *TransitionStack) push(iTr IndTrans) {
 
 // pop transition id from stack
 func (st *TransitionStack) pop() IndTrans {
-	if (*st).isEmpty() {
+	if (*st).emptyEventList() {
 		return -1
 	}
 
@@ -140,13 +136,13 @@ func (st *TransitionStack) pop() IndTrans {
 	return iTr
 }
 
-// isEmpty  the transition stack ?
-func (st TransitionStack) isEmpty() bool {
+// emptyEventList  the transition stack ?
+func (st TransitionStack) emptyEventList() bool {
 	return len(st) == 0
 }
 
-func (st TransitionStack) ImprimeTransStack(Log *utils.LogStruct) {
-	if st.isEmpty() {
+func (st TransitionStack) ImprimeTransStack(Log *LogStruct) {
+	if st.emptyEventList() {
 		Log.Trace.Println("\tStack TRANSICIONES VACIA")
 	} else {
 		for _, iTr := range st {

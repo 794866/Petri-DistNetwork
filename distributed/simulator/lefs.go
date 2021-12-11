@@ -3,7 +3,6 @@
 package simulator
 
 import (
-	"distributed/packages/utils"
 	"encoding/json"
 	"os"
 )
@@ -20,11 +19,11 @@ type Lefs struct {
 	// Identificadores de las transiciones sensibilizadas para
 	// T = Reloj local actual. Slice que funciona como Stack
 	TransSensib TransitionStack
-	Log      *utils.LogStruct
+	Log         *LogStruct
 }
 
 // Load obtains Lefs from a json file
-func Load(filename string, Log *utils.LogStruct) (Lefs, error) {
+func Load(filename string, Log *LogStruct) (Lefs, error) {
 	file, err := os.Open("/home/uri/go/src/uri/Petri-DistNetwork/distributed/testdata/" + filename)
 	if err != nil {
 		Log.Error.Printf("open json lefs file: %v\n", err)
@@ -123,13 +122,13 @@ func (l *Lefs) agnadeSensibilizada(aiTransicion IndTrans) bool {
 // haySensibilizadas permite saber si tenemos transiciones sensibilizadas;
 // se supone que previamente se ha llamado a actualizaSensibilizadas(relojLocal)
 func (l Lefs) haySensibilizadas() bool {
-	return !l.TransSensib.isEmpty()
+	return !l.TransSensib.emptyEventList()
 }
 
 // getSensibilizada coge el primer identificador de la lista de transiciones
 //	 		sensibilizadas
 func (l *Lefs) getSensibilizada() IndTrans {
-	if (*l).TransSensib.isEmpty() {
+	if (*l).TransSensib.emptyEventList() {
 		return -1
 	}
 

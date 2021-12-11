@@ -6,8 +6,7 @@
 package main
 
 import (
-	"distributed/packages/simulator"
-	"distributed/packages/utils"
+	"distributed/simulator"
 	"fmt"
 	"os"
 	"strconv"
@@ -25,7 +24,7 @@ func main() {
 	netFile, lefsFile := simulator.ParseFilesNames(nodeName)
 
 	// init log
-	Log := utils.InitLogs(nodeName)
+	Log := simulator.LogInitialization(nodeName)
 
 	// read partners and transition mapping to them
 	net := simulator.ReadPartners(netFile)

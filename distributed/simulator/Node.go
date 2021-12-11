@@ -1,7 +1,6 @@
 package simulator
 
 import (
-	"distributed/packages/utils"
 	"encoding/gob"
 	"fmt"
 	"math"
@@ -15,7 +14,7 @@ type Node struct {
 	Listener net.Listener
 	Port     int
 	Partners Partners // V t € output transition, E partner
-	Log   *utils.LogStruct
+	Log      *LogStruct
 }
 
 type ErrorNode struct {
@@ -27,7 +26,7 @@ func (e *ErrorNode) Error() string {
 }
 
 // MakeNode : inicializar MakeNode struct
-func MakeNode(name string, port int, partners Partners, Log *utils.LogStruct) *Node {
+func MakeNode(name string, port int, partners Partners, Log *LogStruct) *Node {
 	gob.Register(Event{})
 	// Open Listener port
 	listener, err := net.Listen("tcp", ":"+strconv.Itoa(port))
@@ -43,7 +42,7 @@ func connect(p *Partner, ch chan bool) {
 	netAddr := fmt.Sprint(p.IP + ":" + strconv.Itoa(p.Port))
 	conn, err := net.Dial("tcp", netAddr)
 	for err != nil {
-		time.Sleep(utils.PeriodRetry * time.Second)
+		time.Sleep(time.Second*3)
 		conn, err = net.Dial("tcp", netAddr)
 	}
 	ch <- true
@@ -65,16 +64,16 @@ func (n *Node) accept(ch chan bool) {
 }
 
 /* Llamada bloqueante hasta recibir el evento algún proceso remoto */
-func (n *Node) waitEvent(chEvent chan Event, chFinish chan bool) {
+func (n *Node) ReciveEvent(chEvent chan Event, FinishChannel chan bool) {
+	//Capacidad 1000 eventos
+	var sliceEvent = make([]Event, 1000)
 	var conn net.Conn
 	var err error
-	var ve = make([]Event, utils.MaxEventsQueueCap)
 	var i = 0
+
 	for {
 		select {
-		case <-chFinish:
-			//time.Sleep(3*time.Second)
-			//Close listener
+		case <-FinishChannel:
 			err := n.Listener.Close()
 			if err != nil {
 				n.Log.Error.Println("Error closing listener")
@@ -82,21 +81,20 @@ func (n *Node) waitEvent(chEvent chan Event, chFinish chan bool) {
 			return
 		default:
 		}
-		//n.Log.Trace.Println("Waiting for connection accept...")
 		if conn, err = n.Listener.Accept(); err != nil {
 			n.Log.Error.Panicf("Server accept connection error: %s\n", err)
 		}
 
 		decoder := gob.NewDecoder(conn)
-		err = decoder.Decode(&ve[i])
+		err = decoder.Decode(&sliceEvent[i])
 		if err != nil {
-			n.Log.Error.Printf("Error while decoding the event: %s\n", err)
+			n.Log.Error.Printf("Error decoding event: %s\n", err)
 			panic(err)
 		}
-		n.Log.Trace.Printf("Received event: %s", ve[i])
+		n.Log.Trace.Printf("Received event: %s", sliceEvent[i])
 		_ = conn.Close() //TODO: que hacer con esto
-		chEvent <- ve[i]
-		i = (i + 1) % utils.MaxEventsQueueCap
+		chEvent <- sliceEvent[i]
+		i = (i + 1) % 1000 //Capacidad de envio de eventos
 	}
 }
 
@@ -110,9 +108,9 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 	conn, err = net.Dial("tcp", netAddr)
 	n.Log.Trace.Printf("Sending event to: %s\n", netAddr)
 	var i int
-	for i = 0; err != nil && i < utils.MaxAttempsConnect; i++ {
-		n.Log.Warning.Printf("Remote node connection error: %s. Retrying in %d...", err, utils.PeriodRetry)
-		time.Sleep(utils.PeriodRetry)
+	for i = 0; err != nil && i < 5; i++ {
+		n.Log.Warning.Printf("Remote connection error: %s. Retrying in %d...", err, time.Second*3)
+		time.Sleep(time.Second*3)
 		conn, err = net.Dial("tcp", netAddr)
 	}
 	if conn != nil {
@@ -120,7 +118,7 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 	}
 	if err != nil || conn == nil {
 		if e.validateCoseEvent() {
-			n.Log.Warning.Printf("Sending close event. Assuming the node [%s] is already closed\n", dstNodeName)
+			n.Log.Warning.Printf("Sending close event - Process [%s] gonna be closed\n", dstNodeName)
 			return
 		}
 		n.Log.Warning.Fatalf("Event -> %s. Remote node connection error: %v\n", e, err)
@@ -134,9 +132,9 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 	e.Is_Sender = n.Name
 	enc := gob.NewEncoder(conn)
 	err = enc.Encode(e)
-	for i = 0; err != nil && i < utils.MaxAttempsConnect; i++ {
-		n.Log.Warning.Printf("Error when sending event: %v. Retrying in %d...", err, utils.PeriodRetry)
-		time.Sleep(utils.PeriodRetry)
+	for i = 0; err != nil && i < 5; i++ {
+		n.Log.Warning.Printf("Error when sending event: %v. Retrying in %d...", err,time.Second*3)
+		time.Sleep(time.Second*3)
 		err = enc.Encode(e)
 	}
 	if err != nil {
@@ -145,7 +143,7 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 	//n.Log.Trace.Printf("Event: %s sent to [%s]\n", e, dstNodeName)
 }
 
-func (n *Node) sendEv2All(e *Event) {
+func (n *Node) sendEventNetworkProcess(e *Event) {
 	for nodeName, p := range n.Partners {
 		if e.IiTiempo > p.LastTimeSent || (e.IiTiempo == p.LastTimeSent && !e.validateNullEvent()) || e.validateCoseEvent() {
 			// Send event only if time is bigger as last sent or is equal and not a NULL event
@@ -175,7 +173,7 @@ func (n *Node) getLowerTimeFIFO() (string, Partner) {
 			lowerLastSafeTime = partSafeTime
 			name = k
 			first = false
-			previousHasEvents = !p.IncomingEvFIFO.isEmpty()
+			previousHasEvents = !p.IncomingEvFIFO.emptyEventList()
 		}
 		if partSafeTime < lowerLastSafeTime || (partSafeTime == lowerLastSafeTime && !previousHasEvents) {
 			// Update lower if it has the lower time received from remote nodes or if the time is the same but
@@ -183,7 +181,7 @@ func (n *Node) getLowerTimeFIFO() (string, Partner) {
 			lowerPart = p
 			lowerLastSafeTime = partSafeTime
 			name = k
-			previousHasEvents = !p.IncomingEvFIFO.isEmpty()
+			previousHasEvents = !p.IncomingEvFIFO.emptyEventList()
 		}
 	}
 	return name, lowerPart

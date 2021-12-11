@@ -1,8 +1,7 @@
 package main
 
 import (
-	"distributed/packages/simulator"
-	"distributed/packages/utils"
+	"distributed/simulator"
 	"fmt"
 	"golang.org/x/crypto/ssh"
 	"os"
@@ -18,7 +17,7 @@ func CreateMotorSimulation() *simulator.SimulationEngine {
 		fmt.Printf("Error creating log dir: %s\n", err)
 	}
 	NetPL, lefsFile := simulator.ParseFilesNames("P0")
-	Log := utils.InitLogs("P0")
+	Log := simulator.LogInitialization("P0")
 
 	// read partners and transition mapping to them
 	net := simulator.ReadPartners(NetPL)
@@ -49,13 +48,13 @@ func terminate() {
 func startNodes(partners simulator.Partners, wg *sync.WaitGroup) {
 	PLConnect = make(map[string]*ssh.Client, 0)
 	for name, proc := range partners {
-		PLConnect[name] = utils.ConnectSSH(proc.Username, proc.IP)
+		PLConnect[name] = simulator.ConnectSSH(proc.Username, proc.IP)
 
 		// Execute program
 		fmt.Println("Starting: " + name)
 		var cmd = commandPath + fmt.Sprintf(" %s %s %d", name, "6subredes", 100)
 		fmt.Printf("Node [%s]->[%s]:$ %s\n", name, proc.IP, cmd)
-		go utils.RunCommandSSH(cmd, PLConnect[name], wg)
+		go simulator.RunCommandSSH(cmd, PLConnect[name], wg)
 	}
 }
 

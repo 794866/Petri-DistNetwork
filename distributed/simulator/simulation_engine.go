@@ -9,7 +9,6 @@ COMENTARIOS:
 package simulator
 
 import (
-	"distributed/packages/utils"
 	"time"
 )
 
@@ -32,26 +31,27 @@ type SimulationEngine struct {
 	ivTransResults     []ResultadoTransition // slice dinámico con los resultados
 	EventNumber        float64               // cantidad de eventos ejecutados
 	MapTransitionsNode MapTransitionNode     // diccionario con el nombre del nodo en el que se encuentra cada transición
-	ChRecvEv           chan Event
-	ChFinish           chan bool
-	Log             *utils.LogStruct
+	ChanReciveEvent    chan Event
+	FinishChannel      chan bool
+	Log                *LogStruct
 }
 
 // MakeMotorSimulation : inicializar SimulationEngine struct
-func MakeMotorSimulation(node *Node, alLaLef Lefs, transDistr MapTransitionNode, finClk TypeClock, Log *utils.LogStruct) *SimulationEngine {
+func MakeMotorSimulation(node *Node, alLaLef Lefs, transDistr MapTransitionNode, finClk TypeClock, Log *LogStruct) *SimulationEngine {
 	m := SimulationEngine{}
 	m.Node = *node
 	m.iiRelojLocal = 0
 	m.iiFinClk = finClk
 	m.ilMisLefs = alLaLef
 	m.IlEventosPend = MakeEventList(100) //aun siendo dinámicos...
-	m.ivTransResults = make([]ResultadoTransition, 0, utils.MaxEventsQueueCap)
+	m.ivTransResults = make([]ResultadoTransition, 0, 100)
 	m.EventNumber = 0
 	m.MapTransitionsNode = transDistr
 	m.Log = Log
-	m.ChRecvEv = make(chan Event, 0)
-	m.ChFinish = make(chan bool, 1)
-	go m.Node.waitEvent(m.ChRecvEv, m.ChFinish)
+	m.ChanReciveEvent = make(chan Event, 0)
+	m.FinishChannel = make(chan bool, 1)
+
+	go m.Node.ReciveEvent(m.ChanReciveEvent, m.FinishChannel)
 	return &m
 }
 
@@ -153,9 +153,9 @@ func (se SimulationEngine) devolverResultados() {
 func (se *SimulationEngine) getLowerEvent() (*Event, bool) {
 	_, lowestTimeNode := se.Node.getLowerTimeFIFO()
 	// There is any local event
-	if se.IlEventosPend.isEmpty() {
+	if se.IlEventosPend.emptyEventList() {
 		// No events from retarded node
-		if lowestTimeNode.IncomingEvFIFO.isEmpty() {
+		if lowestTimeNode.IncomingEvFIFO.emptyEventList() {
 			return nil, false
 		}
 
@@ -168,7 +168,7 @@ func (se *SimulationEngine) getLowerEvent() (*Event, bool) {
 	localEv := se.IlEventosPend.leePrimerEvento()
 	se.Log.Trace.Printf("getLowerEvent: LOCAL->%s, lowerFIFOtime: %d\n", localEv, lowestTimeNode.RemoteSafeTime)
 	// No events in lazy node FIFO
-	if lowestTimeNode.IncomingEvFIFO.isEmpty() {
+	if lowestTimeNode.IncomingEvFIFO.emptyEventList() {
 		if localEv.IiTiempo > lowestTimeNode.RemoteSafeTime {
 			return nil, false // I should return remote ev, but it not exist
 		} else {
@@ -211,7 +211,7 @@ func (se *SimulationEngine) getNextEvent() *Event {
 		_, lowestNodeTime := se.Node.getLowerTimeFIFO()
 		lowestTime := lowestNodeTime.RemoteSafeTime
 		clkFstEvLocal := se.IlEventosPend.leePrimerEvento().IiTiempo
-		if lowestTime > clkFstEvLocal && !se.IlEventosPend.isEmpty() { // Time on NULL event depend on local events
+		if lowestTime > clkFstEvLocal && !se.IlEventosPend.emptyEventList() { // Time on NULL event depend on local events
 			lowestTime = clkFstEvLocal
 		}
 		// Send null event or finish
@@ -228,18 +228,18 @@ func (se *SimulationEngine) getNextEvent() *Event {
 		}
 		se.Log.Trace.Printf("Sending NULL event: %s\n", nullEv)
 		if nullEv.getTiempo() <= se.iiFinClk {
-			se.Node.sendEv2All(&nullEv)
+			se.Node.sendEventNetworkProcess(&nullEv)
 		}
 
 		// Wait for a event or a null message
 		se.Log.Trace.Printf("	Waiting for incoming event...\n")
-		recvEv := <-se.ChRecvEv
+		recvEv := <-se.ChanReciveEvent
 
 		// Process event
 		if recvEv.validateCoseEvent() {
 			se.Log.Warning.Printf("Received closing event %s\n", recvEv)
-			time.Sleep(utils.TimeWaitStop)
-			se.ChFinish <- true
+			time.Sleep(time.Second*3)
+			se.FinishChannel <- true
 			return &recvEv
 		} else if recvEv.validateNullEvent() {
 			// Update RemoteSafeTime
@@ -306,9 +306,9 @@ func (se *SimulationEngine) FinishSim() *Event {
 		Ib_IsNULL:    0,
 	}
 	se.Log.Info.Println("Sending closing event")
-	se.Node.sendEv2All(&ev)
-	time.Sleep(utils.TimeWaitStop)
-	se.ChFinish <- true
+	se.Node.sendEventNetworkProcess(&ev)
+	time.Sleep(time.Second*3)
+	se.FinishChannel <- true
 	return &ev
 }
 

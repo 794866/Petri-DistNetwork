@@ -1,4 +1,4 @@
-package utils
+package simulator
 
 import (
 	"log"
@@ -15,7 +15,7 @@ type LogStruct struct {
 	Error   *log.Logger
 }
 
-func InitLogs(processName string) *LogStruct {
+func LogInitialization(processName string) *LogStruct {
 	//Reading PLs logs file
 	logFile, err := os.OpenFile(LogPath+"Log"+processName+".log", os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {

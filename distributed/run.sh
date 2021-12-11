@@ -1,5 +1,6 @@
 #!/bin/bash
 
+killall distributed
 rm -r Logs
 
 echo "Building project..."
