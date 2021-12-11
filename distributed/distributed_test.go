@@ -19,15 +19,15 @@ func CreateMotorSimulation() *simulator.SimulationEngine {
 	NetPL, lefsFile := simulator.ParseFilesNames("P0")
 	Log := simulator.LogInitialization("P0")
 
-	// read partners and transition mapping to them
-	net := simulator.ReadPartners(NetPL)
-	partners := net.Nodes
-	myNode := partners["P0"]
-	delete(partners, "P0")
-	Log.Info.Printf("[%s] Reading partners: \n%s", "P0", partners)
+	// read LogicalProcess and transition mapping to them
+	net := simulator.ReadLogicalProcess(NetPL)
+	LogicalProcess := net.Nodes
+	myNode := LogicalProcess["P0"]
+	delete(LogicalProcess, "P0")
+	Log.Info.Printf("[%s] Reading LogicalProcess: \n%s", "P0", LogicalProcess)
 
 	// Create local node
-	node := simulator.MakeNode("P0", myNode.Port, partners, Log)
+	node := simulator.MakeNode("P0", myNode.Port, LogicalProcess, Log)
 
 	// Carga de la subred
 	lefs, err := simulator.Load(lefsFile, Log)
@@ -45,9 +45,9 @@ func terminate() {
 }
 
 // Source: http://networkbit.ch/golang-ssh-client/
-func startNodes(partners simulator.Partners, wg *sync.WaitGroup) {
+func startNodes(LogicalProcess simulator.LogicalProcess, wg *sync.WaitGroup) {
 	PLConnect = make(map[string]*ssh.Client, 0)
-	for name, proc := range partners {
+	for name, proc := range LogicalProcess {
 		PLConnect[name] = simulator.ConnectSSH(proc.Username, proc.IP)
 
 		// Execute program
@@ -65,7 +65,7 @@ func TestFuncTest(t *testing.T) {
 
 	// Setup Motor Simulation of root net
 	ms := CreateMotorSimulation()
-	startNodes(ms.Node.Partners, &wg)
+	startNodes(ms.Node.LogicalProcess, &wg)
 	fmt.Println("[P0] Simulating net...")
 	ms.SimularPeriodo()
 	fmt.Printf("Simulación terminada\n")

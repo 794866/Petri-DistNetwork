@@ -7,9 +7,9 @@ import (
 )
 
 const networkPath = "/home/uri/go/src/uri/Petri-DistNetwork/distributed/testdata/"
-type Partners map[string]Partner // Partner name is the key of the map with all partners
+type LogicalProcess map[string]LPStruct // NameProcess with transitionMapping for all process
 
-type Partner struct {
+type LPStruct struct {
 	Username       string `json:"User"`
 	IP             string `json:"IP"`
 	Port           int    `json:"Port"`
@@ -21,11 +21,11 @@ type Partner struct {
 
 type MapTransitionNode map[IndTrans]string
 type Network struct {
-	Nodes        Partners          `json:"Nodes"`
+	Nodes        LogicalProcess          `json:"Nodes"`
 	MapTransNode MapTransitionNode `json:"TransitionsMapping"`
 }
 
-func ReadPartners(networkFile string) *Network {
+func ReadLogicalProcess(networkFile string) *Network {
 
 	// read network file json with PLs List - IP && ports
 	data, err := ioutil.ReadFile(networkPath + networkFile)
@@ -50,21 +50,21 @@ func ReadPartners(networkFile string) *Network {
 	return &network
 }
 
-func (p Partners) String() string {
-	res := fmt.Sprint("Partners:")
+func (p LogicalProcess) String() string {
+	res := fmt.Sprint("LogicalProcess:")
 	for k, v := range p {
 		res += fmt.Sprintf("\n\t\t[%s]\t\tIP: %s\t\tPort: %d", k, v.IP, v.Port)
 	}
 	return res
 }
-func (p Partners) StringFIFO() string {
-	res := fmt.Sprint("Partners FIFO --> ")
+func (p LogicalProcess) StringFIFO() string {
+	res := fmt.Sprint("LogicalProcess FIFO --> ")
 	for name, pi := range p {
 		res += fmt.Sprintf("\t%s: %s, ", name, pi.IncomingEvFIFO)
 	}
 	return res
 }
 
-func (p Partner) String() string {
+func (p LPStruct) String() string {
 	return fmt.Sprintf("IP: %s\t\tPort: %d\t\tFIFO: %s\n", p.IP, p.Port, p.IncomingEvFIFO)
 }

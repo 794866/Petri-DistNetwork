@@ -201,7 +201,7 @@ func (se *SimulationEngine) getNextEvent() *Event {
 			} else {
 				name, remoteNode := se.Node.getLowerTimeFIFO()
 				remoteNode.IncomingEvFIFO.eliminaPrimerEvento()
-				se.Node.Partners[name] = remoteNode
+				se.Node.LogicalProcess[name] = remoteNode
 				se.Log.Info.Printf("Lower event is remote: %s\n", ev)
 			}
 			return ev
@@ -243,19 +243,19 @@ func (se *SimulationEngine) getNextEvent() *Event {
 			return &recvEv
 		} else if recvEv.validateNullEvent() {
 			// Update RemoteSafeTime
-			sender := se.Node.Partners[recvEv.getSource()]
+			sender := se.Node.LogicalProcess[recvEv.getSource()]
 			sender.RemoteSafeTime = recvEv.IiTiempo
-			se.Node.Partners[recvEv.getSource()] = sender
+			se.Node.LogicalProcess[recvEv.getSource()] = sender
 
 			// Check if any event has been unblocked
 			se.Log.Trace.Printf("NULL received: %s\n", recvEv)
 		} else { // Event can be processed
 			// Insert event in remote node FIFO
 			se.Log.Trace.Printf("Adding received event to incFIFO: %s\n", recvEv)
-			senderNode := se.Node.Partners[recvEv.getSource()]
+			senderNode := se.Node.LogicalProcess[recvEv.getSource()]
 			senderNode.RemoteSafeTime = recvEv.IiTiempo
 			senderNode.IncomingEvFIFO.inserta(recvEv)
-			se.Node.Partners[recvEv.getSource()] = senderNode
+			se.Node.LogicalProcess[recvEv.getSource()] = senderNode
 		}
 	}
 }
@@ -277,7 +277,7 @@ func (se *SimulationEngine) simularUnpaso() bool {
 
 	se.Log.Trace.Println("·········· Lista eventos después de disparos ········")
 	se.Log.Trace.Printf("Eventos locales: %s\n", se.IlEventosPend)
-	se.Log.Trace.Println(se.Node.Partners.StringFIFO())
+	se.Log.Trace.Println(se.Node.LogicalProcess.StringFIFO())
 	se.Log.Trace.Println("·········· Final lista eventos ······················")
 
 	ev := se.getNextEvent()
@@ -298,7 +298,7 @@ func (se *SimulationEngine) simularUnpaso() bool {
 }
 
 func (se *SimulationEngine) FinishSim() *Event {
-	// Send closing event to partners
+	// Send closing event to LogicalProcess
 	ev := Event{
 		IiTiempo:     se.iiRelojLocal,
 		IiTransicion: FINISH_EVENT,

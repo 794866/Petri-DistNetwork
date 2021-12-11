@@ -26,15 +26,15 @@ func main() {
 	// init log
 	Log := simulator.LogInitialization(nodeName)
 
-	// read partners and transition mapping to them
-	net := simulator.ReadPartners(netFile)
-	partners := net.Nodes
-	myNode := partners[nodeName]
-	delete(partners, nodeName)
-	Log.Info.Printf("[%s] Reading partners: \n%s", nodeName, partners)
+	// read LogicalProcess and transition mapping to them
+	net := simulator.ReadLogicalProcess(netFile)
+	LogicalProcess := net.Nodes
+	myNode := LogicalProcess[nodeName]
+	delete(LogicalProcess, nodeName)
+	Log.Info.Printf("[%s] Reading LogicalProcess: \n%s", nodeName, LogicalProcess)
 
 	// Create local node
-	node := simulator.MakeNode(nodeName, myNode.Port, partners, Log)
+	node := simulator.MakeNode(nodeName, myNode.Port, LogicalProcess, Log)
 
 	// Carga de la subred
 	lefs, err := simulator.Load(lefsFile, Log)

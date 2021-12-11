@@ -13,7 +13,7 @@ type Node struct {
 	Name     string
 	Listener net.Listener
 	Port     int
-	Partners Partners // V t € output transition, E partner
+	LogicalProcess LogicalProcess // V t € output transition, E partner
 	Log      *LogStruct
 }
 
@@ -26,7 +26,7 @@ func (e *ErrorNode) Error() string {
 }
 
 // MakeNode : inicializar MakeNode struct
-func MakeNode(name string, port int, partners Partners, Log *LogStruct) *Node {
+func MakeNode(name string, port int, LogicalProcess LogicalProcess, Log *LogStruct) *Node {
 	gob.Register(Event{})
 	// Open Listener port
 	listener, err := net.Listen("tcp", ":"+strconv.Itoa(port))
@@ -34,11 +34,11 @@ func MakeNode(name string, port int, partners Partners, Log *LogStruct) *Node {
 		Log.Error.Fatalf("ERROR: unable to open port: %s. Error: %s.", strconv.Itoa(port), err)
 	}
 
-	n := Node{name, listener, port, partners, Log}
+	n := Node{name, listener, port, LogicalProcess, Log}
 	return &n
 }
 
-func connect(p *Partner, ch chan bool) {
+func connect(p *LPStruct, ch chan bool) {
 	netAddr := fmt.Sprint(p.IP + ":" + strconv.Itoa(p.Port))
 	conn, err := net.Dial("tcp", netAddr)
 	for err != nil {
@@ -103,7 +103,7 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 	var conn net.Conn
 	var err error
 
-	dstNode := n.Partners[dstNodeName]
+	dstNode := n.LogicalProcess[dstNodeName]
 	netAddr := fmt.Sprint(dstNode.IP + ":" + strconv.Itoa(dstNode.Port))
 	conn, err = net.Dial("tcp", netAddr)
 	n.Log.Trace.Printf("Sending event to: %s\n", netAddr)
@@ -127,7 +127,7 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 
 	// Update lastTimeSent used to ensure the order and not send repetitive null events
 	dstNode.LastTimeSent = e.IiTiempo
-	n.Partners[dstNodeName] = dstNode
+	n.LogicalProcess[dstNodeName] = dstNode
 
 	e.Is_Sender = n.Name
 	enc := gob.NewEncoder(conn)
@@ -144,7 +144,7 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 }
 
 func (n *Node) sendEventNetworkProcess(e *Event) {
-	for nodeName, p := range n.Partners {
+	for nodeName, p := range n.LogicalProcess {
 		if e.IiTiempo > p.LastTimeSent || (e.IiTiempo == p.LastTimeSent && !e.validateNullEvent()) || e.validateCoseEvent() {
 			// Send event only if time is bigger as last sent or is equal and not a NULL event
 			//n.Log.Trace.Printf("Sending ev %s to node [%s]\n", e, nodeName)
@@ -158,15 +158,15 @@ func (n *Node) sendEventNetworkProcess(e *Event) {
 }
 
 // Return the partner with lower remote time
-func (n *Node) getLowerTimeFIFO() (string, Partner) {
+func (n *Node) getLowerTimeFIFO() (string, LPStruct) {
 
 	var lowerLastSafeTime TypeClock
 	lowerLastSafeTime = math.MinInt32
-	var lowerPart Partner
+	var lowerPart LPStruct
 	var name string
 	first := true
 	previousHasEvents := false
-	for k, p := range n.Partners {
+	for k, p := range n.LogicalProcess {
 		partSafeTime := p.RemoteSafeTime
 		if first {
 			lowerPart = p
