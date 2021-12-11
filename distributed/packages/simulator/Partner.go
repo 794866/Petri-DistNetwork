@@ -33,7 +33,7 @@ func ReadPartners(networkFile string) *Network {
 		panic(err)
 	}
 
-	fmt.Println("JSON Network file OK!")
+	fmt.Println("Network file OK!")
 
 	var network Network
 	// parse content of json file to Config struct

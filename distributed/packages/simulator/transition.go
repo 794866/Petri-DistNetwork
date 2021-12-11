@@ -60,29 +60,29 @@ func (t *Transition) updateFuncValue(aiValLef TypeConst) {
 }
 
 // Imprime los atributos de una transicion para depurar errores
-func (t *Transition) Imprime(logger *utils.LogStruct) {
-	logger.Trace.Println("Dato Transicion:")
-	logger.Trace.Println("IDLOCALTRANSICION: ", t.IiIndGlobal)
-	logger.Trace.Println("\tVALOR LEF: ", t.IiValorLef)
-	logger.Trace.Println("\tTIEMPO: ", t.IiTiempo)
-	logger.Trace.Println("\tDURACION DISPARO: ", t.IiDuracionDisparo)
-	logger.Trace.Println("\tLISTA DE CTES IUL: ")
+func (t *Transition) Imprime(Log *utils.LogStruct) {
+	Log.Trace.Println("Dato Transicion:")
+	Log.Trace.Println("IDLOCALTRANSICION: ", t.IiIndGlobal)
+	Log.Trace.Println("\tVALOR LEF: ", t.IiValorLef)
+	Log.Trace.Println("\tTIEMPO: ", t.IiTiempo)
+	Log.Trace.Println("\tDURACION DISPARO: ", t.IiDuracionDisparo)
+	Log.Trace.Println("\tLISTA DE CTES IUL: ")
 	for _, v := range t.TransConstIul {
-		logger.Trace.Println("\tTRANSICION: ", v[0], "\t\tCTE: ", v[1])
+		Log.Trace.Println("\tTRANSICION: ", v[0], "\t\tCTE: ", v[1])
 	}
-	logger.Trace.Printf("\tLISTA DE CTES PUL: \n")
+	Log.Trace.Printf("\tLISTA DE CTES PUL: \n")
 	for _, v := range t.TransConstPul {
-		logger.Trace.Printf("\t\tTRANSICION: %d\t\tCTE: %d\n", v[0], v[1])
+		Log.Trace.Printf("\t\tTRANSICION: %d\t\tCTE: %d\n", v[0], v[1])
 	}
-	logger.Trace.Println()
+	Log.Trace.Println()
 }
 
 // ImprimeValores de la transición
-func (t *Transition) ImprimeValores(logger *utils.LogStruct) {
-	logger.Trace.Println("Transicion -> ")
-	logger.Trace.Println("\tIDLOCALTRANSICION: ", t.IiIndGlobal)
-	logger.Trace.Println("\t\tVALOR LEF: ", t.IiValorLef)
-	logger.Trace.Println("\t\tTIEMPO: ", t.IiTiempo)
+func (t *Transition) ImprimeValores(Log *utils.LogStruct) {
+	Log.Trace.Println("Transicion -> ")
+	Log.Trace.Println("\tIDLOCALTRANSICION: ", t.IiIndGlobal)
+	Log.Trace.Println("\t\tVALOR LEF: ", t.IiValorLef)
+	Log.Trace.Println("\t\tTIEMPO: ", t.IiTiempo)
 }
 
 //--------------------------------------------------------------------------
@@ -105,10 +105,10 @@ func (tl *TransitionList) getLocalIndTrans(indGlob IndTrans) IndTrans {
 	return TRANS_IND_ERROR
 }
 
-func (tl TransitionList) ImprimeTL(logger *utils.LogStruct) {
-	logger.Trace.Println("Transition list: [ ")
+func (tl TransitionList) ImprimeTL(Log *utils.LogStruct) {
+	Log.Trace.Println("Transition list: [ ")
 	for _, tr := range tl {
-		logger.Trace.Println(tr)
+		Log.Trace.Println(tr)
 	}
 }
 
@@ -145,12 +145,12 @@ func (st TransitionStack) isEmpty() bool {
 	return len(st) == 0
 }
 
-func (st TransitionStack) ImprimeTransStack(logger *utils.LogStruct) {
+func (st TransitionStack) ImprimeTransStack(Log *utils.LogStruct) {
 	if st.isEmpty() {
-		logger.Trace.Println("\tStack TRANSICIONES VACIA")
+		Log.Trace.Println("\tStack TRANSICIONES VACIA")
 	} else {
 		for _, iTr := range st {
-			logger.Trace.Println("\t\t\t", iTr)
+			Log.Trace.Println("\t\t\t", iTr)
 		}
 	}
 }

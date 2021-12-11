@@ -22,29 +22,29 @@ func main() {
 	var nodeName string
 	nodeName = os.Args[1]
 	//filesPrefix = os.Args[2]
-	netFile, lefsFile := utils.ParseFilesNames(nodeName)
+	netFile, lefsFile := simulator.ParseFilesNames(nodeName)
 
 	// init log
-	logger := utils.InitLoggers(nodeName)
+	Log := utils.InitLogs(nodeName)
 
 	// read partners and transition mapping to them
 	net := simulator.ReadPartners(netFile)
 	partners := net.Nodes
 	myNode := partners[nodeName]
 	delete(partners, nodeName)
-	logger.Info.Printf("[%s] Reading partners: \n%s", nodeName, partners)
+	Log.Info.Printf("[%s] Reading partners: \n%s", nodeName, partners)
 
 	// Create local node
-	node := simulator.MakeNode(nodeName, myNode.Port, partners, logger)
+	node := simulator.MakeNode(nodeName, myNode.Port, partners, Log)
 
 	// Carga de la subred
-	lefs, err := simulator.Load(lefsFile, logger)
+	lefs, err := simulator.Load(lefsFile, Log)
 	if err != nil {
 		println("Couln't load the Petri Net file !")
 	}
 	cicloFinal, _ := strconv.Atoi(os.Args[3])
-	ms := simulator.MakeMotorSimulation(node, lefs, net.MapTransNode, simulator.TypeClock(cicloFinal), logger)
+	ms := simulator.MakeMotorSimulation(node, lefs, net.MapTransNode, simulator.TypeClock(cicloFinal), Log)
 
-	fmt.Printf("[%s] Simulating net...\n", nodeName)
+	fmt.Printf("Simulating [%s]\n", nodeName)
 	ms.SimularPeriodo()
 }

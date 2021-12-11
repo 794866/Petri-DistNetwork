@@ -1,7 +1,6 @@
 #!/bin/bash
 
-rm -r results/*
-rm -r Logs/*
+rm -r Logs
 
 echo "Building project..."
 go build distributed.go

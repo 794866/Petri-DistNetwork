@@ -70,18 +70,18 @@ func (e Event) getCte() TypeConst {
 	return e.IiCte
 }
 
-// devuelve true si y solo si el evento indica el fin de la ejecución
-func (e Event) IsClosingEvent() bool {
+//Validaste if event is close
+func (e Event) validateCoseEvent() bool {
 	return e.IiTransicion == FINISH_EVENT
 }
 
-// devuelve true si y solo si es un evento nulo
-func (e Event) IsNullEvent() bool {
+//validate Null event
+func (e Event) validateNullEvent() bool {
 	return e.Ib_IsNULL == 1
 }
 
-// getCte obtiene la cte del evento a aplicar a la transición
-func (e Event) getSender() string {
+//get sender process
+func (e Event) getSource() string {
 	return e.Is_Sender
 }
 
@@ -97,7 +97,7 @@ func (e Event) Imprime(i int, l *utils.LogStruct) {
 func (e Event) String() string {
 	res := "{ "
 	res += fmt.Sprintf("INDTRANS: %d,\tSENDER: %s,\tTIEMPO: %d", e.IiTransicion, e.Is_Sender, e.IiTiempo)
-	if e.IsNullEvent() {
+	if e.validateNullEvent() {
 		res += ",\tNULL"
 	} else {
 		res += fmt.Sprintf(",\tCSTE: %d", e.IiCte)

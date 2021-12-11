@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-const loggerPath = "/home/uri/go/src/uri/Petri-DistNetwork/distributed/Logs/6subredes/"
+const LogPath = "/home/uri/go/src/uri/Petri-DistNetwork/distributed/Logs/6subredes/"
 
 type LogStruct struct {
 	// Logs
@@ -15,9 +15,9 @@ type LogStruct struct {
 	Error   *log.Logger
 }
 
-func InitLoggers(processName string) *LogStruct {
+func InitLogs(processName string) *LogStruct {
 	//Reading PLs logs file
-	logFile, err := os.OpenFile(loggerPath+"Log"+processName+".log", os.O_CREATE|os.O_WRONLY, 0666)
+	logFile, err := os.OpenFile(LogPath+"Log"+processName+".log", os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		log.Fatalln("Failed to open log file:", err)
 	}

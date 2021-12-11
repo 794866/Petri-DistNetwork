@@ -12,30 +12,30 @@ import (
 const commandPath = "/home/uri/go/src/uri/Petri-DistNetwork/distributed/distributed"
 
 func CreateMotorSimulation() *simulator.SimulationEngine {
-	// init logger, create files and build files names
-	err := os.Mkdir("Logs/6subredes", os.ModePerm)
+	// init Log, create files and build files names
+	err := os.MkdirAll("Logs/6subredes", os.ModePerm)
 	if err != nil {
 		fmt.Printf("Error creating log dir: %s\n", err)
 	}
-	NetPL, lefsFile := utils.ParseFilesNames("P0")
-	logger := utils.InitLoggers("P0")
+	NetPL, lefsFile := simulator.ParseFilesNames("P0")
+	Log := utils.InitLogs("P0")
 
 	// read partners and transition mapping to them
 	net := simulator.ReadPartners(NetPL)
 	partners := net.Nodes
 	myNode := partners["P0"]
 	delete(partners, "P0")
-	logger.Info.Printf("[%s] Reading partners: \n%s", "P0", partners)
+	Log.Info.Printf("[%s] Reading partners: \n%s", "P0", partners)
 
 	// Create local node
-	node := simulator.MakeNode("P0", myNode.Port, partners, logger)
+	node := simulator.MakeNode("P0", myNode.Port, partners, Log)
 
 	// Carga de la subred
-	lefs, err := simulator.Load(lefsFile, logger)
+	lefs, err := simulator.Load(lefsFile, Log)
 	if err != nil {
 		println("Couln't load the Petri Net file !")
 	}
-	return simulator.MakeMotorSimulation(node, lefs, net.MapTransNode, 100, logger)
+	return simulator.MakeMotorSimulation(node, lefs, net.MapTransNode, 100, Log)
 }
 
 var PLConnect map[string]*ssh.Client

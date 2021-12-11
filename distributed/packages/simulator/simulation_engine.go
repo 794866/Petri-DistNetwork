@@ -34,11 +34,11 @@ type SimulationEngine struct {
 	MapTransitionsNode MapTransitionNode     // diccionario con el nombre del nodo en el que se encuentra cada transición
 	ChRecvEv           chan Event
 	ChFinish           chan bool
-	Logger             *utils.LogStruct
+	Log             *utils.LogStruct
 }
 
 // MakeMotorSimulation : inicializar SimulationEngine struct
-func MakeMotorSimulation(node *Node, alLaLef Lefs, transDistr MapTransitionNode, finClk TypeClock, logger *utils.LogStruct) *SimulationEngine {
+func MakeMotorSimulation(node *Node, alLaLef Lefs, transDistr MapTransitionNode, finClk TypeClock, Log *utils.LogStruct) *SimulationEngine {
 	m := SimulationEngine{}
 	m.Node = *node
 	m.iiRelojLocal = 0
@@ -48,7 +48,7 @@ func MakeMotorSimulation(node *Node, alLaLef Lefs, transDistr MapTransitionNode,
 	m.ivTransResults = make([]ResultadoTransition, 0, utils.MaxEventsQueueCap)
 	m.EventNumber = 0
 	m.MapTransitionsNode = transDistr
-	m.Logger = logger
+	m.Log = Log
 	m.ChRecvEv = make(chan Event, 0)
 	m.ChFinish = make(chan bool, 1)
 	go m.Node.waitEvent(m.ChRecvEv, m.ChFinish)
@@ -72,7 +72,7 @@ func (se *SimulationEngine) dispararTransicion(ilTr IndTrans) {
 		// check if IUL transition belongs to local transition
 		if trIndLocal == TRANS_IND_ERROR {
 			//TODO: it always should be true, delete when it works
-			se.Logger.Error.Printf("Error: IUL transition not belongs to local transition."+
+			se.Log.Error.Printf("Error: IUL transition not belongs to local transition."+
 				"Node: [%s] - IUL trans: %v\n", se.Node.Name, trCo)
 		}
 		trList[trIndLocal].updateFuncValue(TypeConst(trCo[1]))
@@ -85,10 +85,10 @@ func (se *SimulationEngine) dispararTransicion(ilTr IndTrans) {
 			IndTrans(trCo[0]),
 			TypeConst(trCo[1]), 0, se.Node.Name}
 		if evDstNode != se.Node.Name { // la transición destino está en otro nodo
-			se.Logger.Info.Printf("Sending event %s to node [%s]\n", ev, evDstNode)
+			se.Log.Info.Printf("Sending event %s to node [%s]\n", ev, evDstNode)
 			se.Node.sendEvent(&ev, evDstNode)
 		} else {
-			se.Logger.Trace.Printf("Appending local event: %s\n", ev)
+			se.Log.Trace.Printf("Appending local event: %s\n", ev)
 			se.IlEventosPend.inserta(ev)
 		}
 	}
@@ -114,11 +114,11 @@ func (se *SimulationEngine) fireEnabledTransitions(aiLocalClock TypeClock) {
 // tratarEventos : Accede a lista eventos y trata todos con tiempo aiTiempo
 func (se *SimulationEngine) tratarEvento(ev *Event) {
 	if ev.getTiempo() == se.iiRelojLocal {
-		se.Logger.Info.Printf("Processing next event: %s .....\n", ev)
+		se.Log.Info.Printf("Processing next event: %s .....\n", ev)
 		trList := se.ilMisLefs.IaRed // obtener lista de transiciones de Lefs
 		localIndTrans := trList.getLocalIndTrans(ev.IiTransicion)
 		if localIndTrans == TRANS_IND_ERROR {
-			se.Logger.Error.Panicf("Cannot find transition id [%d] in >> %v <<", ev.IiTransicion, trList)
+			se.Log.Error.Panicf("Cannot find transition id [%d] in >> %v <<", ev.IiTransicion, trList)
 		}
 		// Establecer nuevo valor de la funcion
 		trList[localIndTrans].updateFuncValue(ev.IiCte)
@@ -127,24 +127,24 @@ func (se *SimulationEngine) tratarEvento(ev *Event) {
 
 		se.EventNumber++
 	} else {
-		se.Logger.Error.Panicf("Processing event in other time: event time: %d - local time: %d", ev.IiTiempo, se.iiRelojLocal)
+		se.Log.Error.Panicf("Processing event in other time: event time: %d - local time: %d", ev.IiTiempo, se.iiRelojLocal)
 	}
 }
 
 // devolverResultados : Mostrar los resultados de la simulacion
 func (se SimulationEngine) devolverResultados() {
-	se.Logger.Info.Println("----------------------------------------")
-	se.Logger.Info.Println("Resultados del simulador local")
-	se.Logger.Info.Println("----------------------------------------")
+	se.Log.Info.Println("----------------------------------------")
+	se.Log.Info.Println("Resultados del simulador local")
+	se.Log.Info.Println("----------------------------------------")
 	if len(se.ivTransResults) == 0 {
-		se.Logger.Info.Println("No esperes ningun resultado...")
+		se.Log.Info.Println("No esperes ningun resultado...")
 	}
 
 	for _, liResult := range se.ivTransResults {
-		se.Logger.Info.Printf("TIEMPO: %d  -> TRANSICION: %d\n", liResult.ValorRelojDisparo, liResult.CodTransition)
+		se.Log.Info.Printf("TIEMPO: %d  -> TRANSICION: %d\n", liResult.ValorRelojDisparo, liResult.CodTransition)
 	}
 
-	se.Logger.Info.Printf("========== TOTAL DE TRANSICIONES DISPARADAS = %d\n", len(se.ivTransResults))
+	se.Log.Info.Printf("========== TOTAL DE TRANSICIONES DISPARADAS = %d\n", len(se.ivTransResults))
 }
 
 // Devuelve el evento menor entre la FIFO con tiempo menor y el local.
@@ -166,7 +166,7 @@ func (se *SimulationEngine) getLowerEvent() (*Event, bool) {
 
 	// Get local event
 	localEv := se.IlEventosPend.leePrimerEvento()
-	se.Logger.Trace.Printf("getLowerEvent: LOCAL->%s, lowerFIFOtime: %d\n", localEv, lowestTimeNode.RemoteSafeTime)
+	se.Log.Trace.Printf("getLowerEvent: LOCAL->%s, lowerFIFOtime: %d\n", localEv, lowestTimeNode.RemoteSafeTime)
 	// No events in lazy node FIFO
 	if lowestTimeNode.IncomingEvFIFO.isEmpty() {
 		if localEv.IiTiempo > lowestTimeNode.RemoteSafeTime {
@@ -197,12 +197,12 @@ func (se *SimulationEngine) getNextEvent() *Event {
 			// delete event for list
 			if isLocalEv {
 				se.IlEventosPend.eliminaPrimerEvento()
-				se.Logger.Info.Printf("Lower event is local: %s\n", ev)
+				se.Log.Info.Printf("Lower event is local: %s\n", ev)
 			} else {
 				name, remoteNode := se.Node.getLowerTimeFIFO()
 				remoteNode.IncomingEvFIFO.eliminaPrimerEvento()
 				se.Node.Partners[name] = remoteNode
-				se.Logger.Info.Printf("Lower event is remote: %s\n", ev)
+				se.Log.Info.Printf("Lower event is remote: %s\n", ev)
 			}
 			return ev
 		}
@@ -226,36 +226,36 @@ func (se *SimulationEngine) getNextEvent() *Event {
 			IiTiempo:     nextTime,
 			Ib_IsNULL:    1,
 		}
-		se.Logger.Trace.Printf("Sending NULL event: %s\n", nullEv)
+		se.Log.Trace.Printf("Sending NULL event: %s\n", nullEv)
 		if nullEv.getTiempo() <= se.iiFinClk {
 			se.Node.sendEv2All(&nullEv)
 		}
 
 		// Wait for a event or a null message
-		se.Logger.Trace.Printf("	Waiting for incoming event...\n")
+		se.Log.Trace.Printf("	Waiting for incoming event...\n")
 		recvEv := <-se.ChRecvEv
 
 		// Process event
-		if recvEv.IsClosingEvent() {
-			se.Logger.Warning.Printf("Received closing event %s\n", recvEv)
+		if recvEv.validateCoseEvent() {
+			se.Log.Warning.Printf("Received closing event %s\n", recvEv)
 			time.Sleep(utils.TimeWaitStop)
 			se.ChFinish <- true
 			return &recvEv
-		} else if recvEv.IsNullEvent() {
+		} else if recvEv.validateNullEvent() {
 			// Update RemoteSafeTime
-			sender := se.Node.Partners[recvEv.getSender()]
+			sender := se.Node.Partners[recvEv.getSource()]
 			sender.RemoteSafeTime = recvEv.IiTiempo
-			se.Node.Partners[recvEv.getSender()] = sender
+			se.Node.Partners[recvEv.getSource()] = sender
 
 			// Check if any event has been unblocked
-			se.Logger.Trace.Printf("NULL received: %s\n", recvEv)
+			se.Log.Trace.Printf("NULL received: %s\n", recvEv)
 		} else { // Event can be processed
 			// Insert event in remote node FIFO
-			se.Logger.Trace.Printf("Adding received event to incFIFO: %s\n", recvEv)
-			senderNode := se.Node.Partners[recvEv.getSender()]
+			se.Log.Trace.Printf("Adding received event to incFIFO: %s\n", recvEv)
+			senderNode := se.Node.Partners[recvEv.getSource()]
 			senderNode.RemoteSafeTime = recvEv.IiTiempo
 			senderNode.IncomingEvFIFO.inserta(recvEv)
-			se.Node.Partners[recvEv.getSender()] = senderNode
+			se.Node.Partners[recvEv.getSource()] = senderNode
 		}
 	}
 }
@@ -263,36 +263,36 @@ func (se *SimulationEngine) getNextEvent() *Event {
 // SimularUnpaso de una RdP con duración disparo >= 1. Devuelve true si se ha procesado el ultimo evento
 func (se *SimulationEngine) simularUnpaso() bool {
 
-	se.Logger.Info.Printf("####################### CLK = %d #######################\n", se.iiRelojLocal)
+	se.Log.Info.Printf("####################### CLK = %d #######################\n", se.iiRelojLocal)
 	se.ilMisLefs.ImprimeLefs()
 	se.ilMisLefs.actualizaSensibilizadas(se.iiRelojLocal)
-	se.Logger.Trace.Println(">>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<")
-	se.ilMisLefs.TransSensib.ImprimeTransStack(se.Logger)
-	se.Logger.Trace.Println(">>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<")
+	se.Log.Trace.Println(">>>>>>>>>> Stack de transiciones sensibilizadas <<<<<<<<")
+	se.ilMisLefs.TransSensib.ImprimeTransStack(se.Log)
+	se.Log.Trace.Println(">>>>>>>>>> Final Stack de transiciones <<<<<<<<<<<<<<<<<")
 
 	// Fire enabled transitions and produce events
 	if se.ilMisLefs.haySensibilizadas() {
 		se.fireEnabledTransitions(se.iiRelojLocal)
 	}
 
-	se.Logger.Trace.Println("·········· Lista eventos después de disparos ········")
-	se.Logger.Trace.Printf("Eventos locales: %s\n", se.IlEventosPend)
-	se.Logger.Trace.Println(se.Node.Partners.StringFIFO())
-	se.Logger.Trace.Println("·········· Final lista eventos ······················")
+	se.Log.Trace.Println("·········· Lista eventos después de disparos ········")
+	se.Log.Trace.Printf("Eventos locales: %s\n", se.IlEventosPend)
+	se.Log.Trace.Println(se.Node.Partners.StringFIFO())
+	se.Log.Trace.Println("·········· Final lista eventos ······················")
 
 	ev := se.getNextEvent()
-	if ev.IsClosingEvent() {
+	if ev.validateCoseEvent() {
 		return true
 	} else if ev != nil {
 		// advance local clock to soonest available event
 		se.iiRelojLocal = ev.IiTiempo
-		se.Logger.Trace.Printf("+++ NEXT CLOCK: %d +++\n", se.iiRelojLocal)
+		se.Log.Trace.Printf("+++ NEXT CLOCK: %d +++\n", se.iiRelojLocal)
 
 		// if events exist for current local clock, process them
 		se.tratarEvento(ev)
 		return false
 	} else {
-		se.Logger.Error.Panicf("Simulating nil event\n")
+		se.Log.Error.Panicf("Simulating nil event\n")
 		return true
 	}
 }
@@ -305,7 +305,7 @@ func (se *SimulationEngine) FinishSim() *Event {
 		IiCte:        0,
 		Ib_IsNULL:    0,
 	}
-	se.Logger.Info.Println("Sending closing event")
+	se.Log.Info.Println("Sending closing event")
 	se.Node.sendEv2All(&ev)
 	time.Sleep(utils.TimeWaitStop)
 	se.ChFinish <- true
@@ -318,8 +318,6 @@ func (se *SimulationEngine) FinishSim() *Event {
 //		   - Ciclo con el que terminamos
 func (se *SimulationEngine) SimularPeriodo() {
 	ldIni := time.Now()
-
-	//se.Node.Wait4PartnersSetup()
 	finish := false
 	initClk := se.iiRelojLocal
 	for se.iiRelojLocal < se.iiFinClk && !finish {
@@ -331,12 +329,12 @@ func (se *SimulationEngine) SimularPeriodo() {
 	}
 	elapsedTime := time.Since(ldIni)
 
-	se.Logger.Info.Printf("Eventos por segundo = %.4f\n",
+	se.Log.Info.Printf("Eventos por segundo = %.4f\n",
 		se.EventNumber/elapsedTime.Seconds())
 
 	// Devolver los resultados de la simulacion
 	se.devolverResultados()
-	se.Logger.Info.Println("---------------------")
-	se.Logger.Info.Printf("TIEMPO SIMULADO en ciclos: %d\n", se.iiFinClk-initClk)
-	se.Logger.Info.Printf("TIEMPO ejecución REAL simulación: %s\n", elapsedTime.String())
+	se.Log.Info.Println("---------------------")
+	se.Log.Info.Printf("TIEMPO SIMULADO en ciclos: %d\n", se.iiFinClk-initClk)
+	se.Log.Info.Printf("TIEMPO ejecución REAL simulación: %s\n", elapsedTime.String())
 }

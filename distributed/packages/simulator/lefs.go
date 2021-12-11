@@ -20,26 +20,26 @@ type Lefs struct {
 	// Identificadores de las transiciones sensibilizadas para
 	// T = Reloj local actual. Slice que funciona como Stack
 	TransSensib TransitionStack
-	Logger      *utils.LogStruct
+	Log      *utils.LogStruct
 }
 
 // Load obtains Lefs from a json file
-func Load(filename string, logger *utils.LogStruct) (Lefs, error) {
+func Load(filename string, Log *utils.LogStruct) (Lefs, error) {
 	file, err := os.Open("/home/uri/go/src/uri/Petri-DistNetwork/distributed/testdata/" + filename)
 	if err != nil {
-		logger.Error.Printf("open json lefs file: %v\n", err)
+		Log.Error.Printf("open json lefs file: %v\n", err)
 		return Lefs{}, err
 	}
 	defer file.Close()
 
 	result := Lefs{}
 	if err := json.NewDecoder(file).Decode(&result); err != nil {
-		logger.Error.Printf("Decode json 		file: %v\n", err)
+		Log.Error.Printf("Decode json 		file: %v\n", err)
 		return Lefs{}, err
 	}
 
 	result.TransSensib = MakeTransitionStack(100) //aun siendo dinamicos...
-	result.Logger = logger
+	result.Log = Log
 	return result, nil
 }
 
@@ -150,26 +150,26 @@ func (l *Lefs) actualizaSensibilizadas(aiRelojLocal TypeClock) bool {
 
 // ImprimeTransiciones para depurar errores
 func (l Lefs) ImprimeTransiciones() {
-	l.Logger.Trace.Println(" ")
-	l.Logger.Trace.Println("------IMPRIMIMOS LA LISTA DE TRANSICIONES---------")
+	l.Log.Trace.Println(" ")
+	l.Log.Trace.Println("------IMPRIMIMOS LA LISTA DE TRANSICIONES---------")
 	for _, tr := range l.IaRed {
-		tr.ImprimeValores(l.Logger)
+		tr.ImprimeValores(l.Log)
 	}
-	l.Logger.Trace.Println("------FINAL DE LA LISTA DE TRANSICIONES---------")
-	l.Logger.Trace.Println(" ")
+	l.Log.Trace.Println("------FINAL DE LA LISTA DE TRANSICIONES---------")
+	l.Log.Trace.Println(" ")
 }
 
 // ImprimeLefs : Imprimir los atributos de la clase para depurar errores
 func (l Lefs) ImprimeLefs() {
 
-	l.Logger.Trace.Println("========== STRUCT LEFS ==========")
-	//l.Logger.Trace.Println ("\tNº transiciones: ", self.ii_indice)
-	l.Logger.Trace.Println("\tNº transiciones: ", l.IaRed.length())
+	l.Log.Trace.Println("========== STRUCT LEFS ==========")
+	//l.Log.Trace.Println ("\tNº transiciones: ", self.ii_indice)
+	l.Log.Trace.Println("\tNº transiciones: ", l.IaRed.length())
 
-	l.Logger.Trace.Println("----- Lista transiciones --------")
+	l.Log.Trace.Println("----- Lista transiciones --------")
 	for _, tr := range l.IaRed {
-		tr.Imprime(l.Logger)
+		tr.Imprime(l.Log)
 	}
-	l.Logger.Trace.Println("---- Final lista transiciones ---")
-	l.Logger.Trace.Println("===== FINAL ESTRUCTURA LEFS =====")
+	l.Log.Trace.Println("---- Final lista transiciones ---")
+	l.Log.Trace.Println("===== FINAL ESTRUCTURA LEFS =====")
 }
