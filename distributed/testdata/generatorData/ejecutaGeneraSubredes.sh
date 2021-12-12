@@ -13,6 +13,6 @@
 #	$1: fichero de salida de la RdP Textual
 #	$2: numero de lugares horizontales
 #	$3: numero de lugares verticales
-#   $4: numero de bloques
+# $4: numero de bloques
 
 java -jar genera_entrada_subredes.jar $1 $2 $3 $4

@@ -190,30 +190,25 @@ func (se *SimulationEngine) getFirstEvent() (*Event, bool) {
 	}
 	return &remoteEvent, false
 }
-
-// Get the lowerEvent. If it not exists, blocks until new event arrive. If it is an event and is the lowest return it.
-// If not, blocks again until receive the lowset and all FIFO have at least one event. If the recv event is null with
-// lower time, blocks again until receives the correct one.
-
-/* */
+/* Metodo bloqueante que recibe el proximo evento a procesar del stack de eventos.
+Si no hay eventos disponibles en el stack espera a recibir el siguiente eventos disponible
+NOTA: Segun el algoritmo no debemos considerar los eventos null como eventos tratables, por lo tanto
+*/
 
 func (se *SimulationEngine) getNextEvent() *Event {
-	// Iterate until get a processable event or finish event
 	for {
-		ev, isLocalEv := se.getFirstEvent()
-		// Not blocked, I've get an event to process
-		if ev != nil {
-			// delete event for list
+		event, isLocalEv := se.getFirstEvent() //Obtenemos el siguiente event a procesar.
+		if event != nil {
 			if isLocalEv {
-				se.IlEventos.eliminaPrimerEvento()
-				se.Log.Info.Printf("Lower event is local: %s\n", ev)
+				se.IlEventos.eliminaPrimerEvento()// delete event for list
+				se.Log.Info.Printf("Lower event is local: %s\n", event)
 			} else {
 				name, remoteNode := se.Node.nextStackTime()
 				remoteNode.IncomingEvFIFO.eliminaPrimerEvento()
 				se.Node.LPs[name] = remoteNode
-				se.Log.Info.Printf("Lower event is remote: %s\n", ev)
+				se.Log.Info.Printf("Lower event is remote: %s\n", event)
 			}
-			return ev
+			return event
 		}
 
 		// I'm gonna to block, send before it an NULL event
@@ -223,48 +218,49 @@ func (se *SimulationEngine) getNextEvent() *Event {
 		if lowestTime > clkFstEvLocal && !se.IlEventos.emptyEventList() { // Time on NULL event depend on local events
 			lowestTime = clkFstEvLocal
 		}
-		// Send null event or finish
 		nextTime := lowestTime + LookAhead
+		//validamos final del ciclo de simulacion
 		if lowestTime >= se.iiFinClk || nextTime >= se.iiFinClk {
-			return se.FinishSim()
+			return se.FinishSimulator()
 		}
-		nullEv := Event{
+		//enviamos tiempo con lookAhead
+		nullEvent := Event{
 			IiTransicion: 0,
 			IiCte:        0,
 			Is_Sender:    se.Node.Name,
 			IiTiempo:     nextTime,
 			Ib_IsNULL:    1,
 		}
-		se.Log.Trace.Printf("Sending NULL event: %s\n", nullEv)
-		if nullEv.getTiempo() <= se.iiFinClk {
-			se.Node.sendEventNetworkProcess(&nullEv)
+		se.Log.Trace.Printf("Sending NULL event: %s\n", nullEvent)
+		if nullEvent.getTiempo() <= se.iiFinClk {
+			se.Node.sendEventNetworkProcess(&nullEvent) //Send null event to other process
 		}
 
-		// Wait for a event or a null message
-		se.Log.Trace.Printf("	Waiting for incoming event...\n")
-		recvEv := <-se.ChanReciveEvent
+		//esperamos el siguiente evento
+		se.Log.Trace.Printf("Waiting for incoming event \n")
+		reciveEvent := <-se.ChanReciveEvent
 
 		// Process event
-		if recvEv.validateCloseEvent() {
-			se.Log.Warning.Printf("Received closing event %s\n", recvEv)
+		if reciveEvent.validateCloseEvent() {
+			se.Log.Warning.Printf("Received close event %s\n", reciveEvent)
 			time.Sleep(time.Second*3)
 			se.FinishChannel <- true
-			return &recvEv
-		} else if recvEv.validateNullEvent() {
+			return &reciveEvent
+		} else if reciveEvent.validateNullEvent() {
 			// Update RemoteSafeTime
-			sender := se.Node.LPs[recvEv.getSource()]
-			sender.RemoteSafeTime = recvEv.IiTiempo
-			se.Node.LPs[recvEv.getSource()] = sender
+			senderNode := se.Node.LPs[reciveEvent.getSource()]
+			senderNode.RemoteSafeTime = reciveEvent.IiTiempo
+			se.Node.LPs[reciveEvent.getSource()] = senderNode
 
 			// Check if any event has been unblocked
-			se.Log.Trace.Printf("NULL received: %s\n", recvEv)
+			se.Log.Trace.Printf("NULL received: %s\n", reciveEvent)
 		} else { // Event can be processed
 			// Insert event in remote node FIFO
-			se.Log.Trace.Printf("Adding received event to incFIFO: %s\n", recvEv)
-			senderNode := se.Node.LPs[recvEv.getSource()]
-			senderNode.RemoteSafeTime = recvEv.IiTiempo
-			senderNode.IncomingEvFIFO.inserta(recvEv)
-			se.Node.LPs[recvEv.getSource()] = senderNode
+			se.Log.Trace.Printf("Adding received event to incFIFO: %s\n", reciveEvent)
+			senderNode := se.Node.LPs[reciveEvent.getSource()]
+			senderNode.RemoteSafeTime = reciveEvent.IiTiempo
+			senderNode.IncomingEvFIFO.inserta(reciveEvent)
+			se.Node.LPs[reciveEvent.getSource()] = senderNode
 		}
 	}
 }
@@ -289,16 +285,16 @@ func (se *SimulationEngine) simularUnpaso() bool {
 	se.Log.Trace.Println(se.Node.LPs.StringFIFO())
 	se.Log.Trace.Println("-----------Final lista eventos-----------")
 
-	ev := se.getNextEvent()
-	if ev.validateCloseEvent() {
+	event := se.getNextEvent()
+	if event.validateCloseEvent() {
 		return true
-	} else if ev != nil {
+	} else if event != nil {
 		// advance local clock to soonest available event
-		se.iiRelojLocal = ev.IiTiempo
+		se.iiRelojLocal = event.IiTiempo
 		se.Log.Trace.Printf("NEXT CLOCK...... : %d\n", se.iiRelojLocal)
 
 		// if events exist for current local clock, process them
-		se.tratarEvento(ev)
+		se.tratarEvento(event)
 		return false
 	} else {
 		se.Log.Error.Panicf("Simulating nil event\n")
@@ -306,7 +302,7 @@ func (se *SimulationEngine) simularUnpaso() bool {
 	}
 }
 
-func (se *SimulationEngine) FinishSim() *Event {
+func (se *SimulationEngine) FinishSimulator() *Event {
 	// Send closing event to LogicalProcess
 	ev := Event{
 		IiTiempo:     se.iiRelojLocal,
@@ -334,7 +330,7 @@ func (se *SimulationEngine) SimularPeriodo() {
 	}
 
 	if !finish {
-		se.FinishSim()
+		se.FinishSimulator()
 	}
 	elapsedTime := time.Since(ldIni)
 
