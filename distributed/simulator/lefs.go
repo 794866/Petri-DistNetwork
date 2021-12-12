@@ -108,7 +108,7 @@ func (me *Lefs) Agnade_transicion (int ai_id,int ai_valor,int ai_tiempo,int ai_d
 -----------------------------------------------------------------
    METODO: agnade_sensibilizada
    RECIBE: Transicion sensibilizada a a�adir
-   DEVUELVE: OK si va bien o ERROR en caso contrario
+   DEVUELVE: OK si todo va bien o ERROR en caso contrario
    PROPOSITO: A�ade a la lista de transiciones sensibilizadas
    HISTORIA DE CAMBIOS:
 COMENTARIOS:

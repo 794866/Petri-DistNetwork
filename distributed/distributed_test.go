@@ -65,7 +65,7 @@ func TestFuncTest(t *testing.T) {
 
 	// Setup Motor Simulation of root net
 	ms := CreateMotorSimulation()
-	startNodes(ms.Node.LogicalProcess, &wg)
+	startNodes(ms.Node.LPs, &wg)
 	fmt.Println("[P0] Simulating net...")
 	ms.SimularPeriodo()
 	fmt.Printf("Simulación terminada\n")

@@ -14,7 +14,6 @@ type LPStruct struct {
 	IP             string `json:"IP"`
 	Port           int    `json:"Port"`
 	IncomingEvFIFO EventList
-	LookAhead      TypeClock
 	RemoteSafeTime TypeClock // for incoming events
 	LastTimeSent   TypeClock // for outcoming events
 }

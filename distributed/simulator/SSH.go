@@ -9,15 +9,15 @@ import (
 	"golang.org/x/crypto/ssh"
 )
 
-const (
-	SshPort        = "22"
-	PrivateKeyPath = "/home/uri/.ssh/id_rsa"
-)
+
+const port = "22"
+const pathLocalKey = "/home/uri/.ssh/id_rsa"
+
 
 func ConnectSSH(user string, host string) *ssh.Client {
 	config := &ssh.ClientConfig{
 		User: user,
-		Auth: []ssh.AuthMethod{getPublicKey(PrivateKeyPath),},
+		Auth: []ssh.AuthMethod{getPublicKey(pathLocalKey),},
 		// allow any host key to be used (non-prod)
 		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
 		HostKeyAlgorithms: []string{
@@ -32,7 +32,7 @@ func ConnectSSH(user string, host string) *ssh.Client {
 		Timeout: 5 * time.Second,
 	}
 	// Connect via ssh
-	client, err := ssh.Dial("tcp", host+":"+SshPort, config)
+	client, err := ssh.Dial("tcp", host+":"+port, config)
 	if err != nil {
 		panic(err)
 	}

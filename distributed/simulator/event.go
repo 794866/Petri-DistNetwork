@@ -1,9 +1,7 @@
 //Package distconssim with several files to offer a distributed conservative simulation
 package simulator
 
-import (
-	"fmt"
-)
+import "fmt"
 
 const FINISH_EVENT = -1
 
@@ -70,7 +68,7 @@ func (e Event) getCte() TypeConst {
 }
 
 //Validaste if event is close
-func (e Event) validateCoseEvent() bool {
+func (e Event) validateCloseEvent() bool {
 	return e.IiTransicion == FINISH_EVENT
 }
 
@@ -90,19 +88,6 @@ func (e Event) Imprime(i int, l *LogStruct) {
 	l.Trace.Println("    TIEMPO: ", e.IiTiempo)
 	l.Trace.Println("    TRANSICION: ", e.IiTransicion)
 	l.Trace.Println("    CONSTANTE: ", e.IiCte)
-}
-
-// Imprime atributos de evento para depurar errores
-func (e Event) String() string {
-	res := "{ "
-	res += fmt.Sprintf("INDTRANS: %d,\tSENDER: %s,\tTIEMPO: %d", e.IiTransicion, e.Is_Sender, e.IiTiempo)
-	if e.validateNullEvent() {
-		res += ",\tNULL"
-	} else {
-		res += fmt.Sprintf(",\tCSTE: %d", e.IiCte)
-	}
-	res += " }"
-	return res
 }
 
 //----------------------------------------------------------------------------
@@ -200,13 +185,16 @@ func (el EventList) Imprime(l *LogStruct) {
 
 }
 
-// Imprime la lista de eventos para depurar errores
-func (el EventList) String() string {
-	res := "[ "
-	for _, e := range el {
-		res += fmt.Sprintf("%s, ", e)
+// Imprime atributos de evento para depurar errores
+func (e Event) String() string {
+	res := "{ "
+	res += fmt.Sprintf("INDTRANS: %d,\tSENDER: %s,\tTIEMPO: %d", e.IiTransicion, e.Is_Sender, e.IiTiempo)
+	if e.validateNullEvent() {
+		res += ",\tNULL"
+	} else {
+		res += fmt.Sprintf(",\tCSTE: %d", e.IiCte)
 	}
-	res += " ]"
+	res += " }"
 	return res
 }
 

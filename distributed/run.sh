@@ -1,7 +1,7 @@
 #!/bin/bash
 
 killall distributed
-rm -r Logs
+rm -r Logs/*
 
 echo "Building project..."
 go build distributed.go

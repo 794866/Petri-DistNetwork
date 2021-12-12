@@ -10,11 +10,11 @@ import (
 )
 
 type Node struct {
-	Name     string
-	Listener net.Listener
-	Port     int
-	LogicalProcess LogicalProcess // V t € output transition, E partner
-	Log      *LogStruct
+	Name	string
+	Listen 	net.Listener
+	Port    int
+	LPs 	LogicalProcess
+	Log     *LogStruct
 }
 
 type ErrorNode struct {
@@ -26,15 +26,15 @@ func (e *ErrorNode) Error() string {
 }
 
 // MakeNode : inicializar MakeNode struct
-func MakeNode(name string, port int, LogicalProcess LogicalProcess, Log *LogStruct) *Node {
+func MakeNode(name string, port int, LPs LogicalProcess, Log *LogStruct) *Node {
 	gob.Register(Event{})
-	// Open Listener port
-	listener, err := net.Listen("tcp", ":"+strconv.Itoa(port))
+	// Open Listen port
+	Listen, err := net.Listen("tcp", ":"+strconv.Itoa(port))
 	if err != nil {
 		Log.Error.Fatalf("ERROR: unable to open port: %s. Error: %s.", strconv.Itoa(port), err)
 	}
 
-	n := Node{name, listener, port, LogicalProcess, Log}
+	n := Node{name, Listen, port, LPs, Log}
 	return &n
 }
 
@@ -57,7 +57,7 @@ func ParseFilesNames(nodeName string) (string, string) {
 }
 
 func (n *Node) accept(ch chan bool) {
-	conn, _ := n.Listener.Accept()
+	conn, _ := n.Listen.Accept()
 	//_, _ = conn.Read(nil)
 	ch <- true
 	_ = conn.Close()
@@ -74,14 +74,14 @@ func (n *Node) ReciveEvent(chEvent chan Event, FinishChannel chan bool) {
 	for {
 		select {
 		case <-FinishChannel:
-			err := n.Listener.Close()
+			err := n.Listen.Close()
 			if err != nil {
-				n.Log.Error.Println("Error closing listener")
+				n.Log.Error.Println("Error closing Listen")
 			}
 			return
 		default:
 		}
-		if conn, err = n.Listener.Accept(); err != nil {
+		if conn, err = n.Listen.Accept(); err != nil {
 			n.Log.Error.Panicf("Server accept connection error: %s\n", err)
 		}
 
@@ -103,7 +103,7 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 	var conn net.Conn
 	var err error
 
-	dstNode := n.LogicalProcess[dstNodeName]
+	dstNode := n.LPs[dstNodeName]
 	netAddr := fmt.Sprint(dstNode.IP + ":" + strconv.Itoa(dstNode.Port))
 	conn, err = net.Dial("tcp", netAddr)
 	n.Log.Trace.Printf("Sending event to: %s\n", netAddr)
@@ -117,7 +117,7 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 		defer conn.Close()
 	}
 	if err != nil || conn == nil {
-		if e.validateCoseEvent() {
+		if e.validateCloseEvent() {
 			n.Log.Warning.Printf("Sending close event - Process [%s] gonna be closed\n", dstNodeName)
 			return
 		}
@@ -127,7 +127,7 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 
 	// Update lastTimeSent used to ensure the order and not send repetitive null events
 	dstNode.LastTimeSent = e.IiTiempo
-	n.LogicalProcess[dstNodeName] = dstNode
+	n.LPs[dstNodeName] = dstNode
 
 	e.Is_Sender = n.Name
 	enc := gob.NewEncoder(conn)
@@ -144,45 +144,46 @@ func (n *Node) sendEvent(e *Event, dstNodeName string) {
 }
 
 func (n *Node) sendEventNetworkProcess(e *Event) {
-	for nodeName, p := range n.LogicalProcess {
-		if e.IiTiempo > p.LastTimeSent || (e.IiTiempo == p.LastTimeSent && !e.validateNullEvent()) || e.validateCoseEvent() {
+	for nodeName, p := range n.LPs {
+		if e.IiTiempo > p.LastTimeSent || (e.IiTiempo == p.LastTimeSent && !e.validateNullEvent()) || e.validateCloseEvent() {
 			// Send event only if time is bigger as last sent or is equal and not a NULL event
 			//n.Log.Trace.Printf("Sending ev %s to node [%s]\n", e, nodeName)
 			n.sendEvent(e, nodeName)
 		} else {
 			if !e.validateNullEvent() {
-				n.Log.Error.Panicf("Sending not ordered event %s to [%s]. LastTimeSent: [%d]\n", e, nodeName, p.LastTimeSent)
+				n.Log.Error.Panicf("Event %s out of order with LastTimeSent: [%d]\n", e, p.LastTimeSent)
 			}
 		}
 	}
 }
 
-// Return the partner with lower remote time
-func (n *Node) getLowerTimeFIFO() (string, LPStruct) {
+// Return the process with lower remote time
+func (n *Node) nextStackTime() (string, LPStruct) {
 
 	var lowerLastSafeTime TypeClock
 	lowerLastSafeTime = math.MinInt32
-	var lowerPart LPStruct
+	var lowerProc LPStruct
 	var name string
 	first := true
 	previousHasEvents := false
-	for k, p := range n.LogicalProcess {
-		partSafeTime := p.RemoteSafeTime
+	for key, proc := range n.LPs {
+		partSafeTime := proc.RemoteSafeTime
 		if first {
-			lowerPart = p
+			lowerProc = proc
 			lowerLastSafeTime = partSafeTime
-			name = k
+			name = key
 			first = false
-			previousHasEvents = !p.IncomingEvFIFO.emptyEventList()
+			previousHasEvents = !proc.IncomingEvFIFO.emptyEventList()
 		}
+		/*Actualiza el tiempo si es menor que los tiempos recibidos por
+		procesos remotos || si es igual pero con eventos en satck
+		*/
 		if partSafeTime < lowerLastSafeTime || (partSafeTime == lowerLastSafeTime && !previousHasEvents) {
-			// Update lower if it has the lower time received from remote nodes or if the time is the same but
-			// actual FIFO has elements
-			lowerPart = p
+			lowerProc = proc
 			lowerLastSafeTime = partSafeTime
-			name = k
-			previousHasEvents = !p.IncomingEvFIFO.emptyEventList()
+			name = key
+			previousHasEvents = !proc.IncomingEvFIFO.emptyEventList()
 		}
 	}
-	return name, lowerPart
+	return name, lowerProc
 }
